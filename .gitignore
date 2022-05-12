@@ -11,6 +11,13 @@
 # production
 /build
 
+# temporary project files
+/design
+src/content.html
+README-project.md
+README-template.md
+style-guide.md
+
 # misc
 .DS_Store
 .env.local
