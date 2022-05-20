@@ -5,8 +5,11 @@
   font-family: inherit;
 }
 
+@mixin link-reset {
+  text-decoration: none;
+}
+
 @mixin btn-base {
-  @include btn-reset();
   color: white;
   font-weight: variables.$font-weight-bold;
 }

@@ -2,6 +2,7 @@
 @use '../../../styles/variables' as variables;
 
 .default {
+  @include mixins.link-reset();
   @include mixins.btn-base();
   background-color: variables.$color-accent;
   font-size: 1.25rem;
