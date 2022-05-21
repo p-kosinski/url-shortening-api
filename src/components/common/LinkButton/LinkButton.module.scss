@@ -1,0 +1,29 @@
+@use '../../../styles/mixins' as mixins;
+@use '../../../styles/variables' as variables;
+
+.default {
+  @include mixins.link-reset();
+  @include mixins.btn-base();
+  background-color: variables.$color-accent;
+  font-size: 1.25rem;
+  padding-block: 0.8rem;
+  padding-inline: 2.5rem;
+  border-radius: variables.$radius-big;
+  cursor: pointer;
+  transition: variables.$transition;
+
+  @media (hover: hover){
+    &:hover {
+      @include mixins.lighten-bg(variables.$color-accent);
+    }
+  }
+
+  &:active {
+    @include mixins.lighten-bg(variables.$color-accent);
+  }
+}
+
+.fullWidth {
+  @extend .default;
+  width: 100%;
+}

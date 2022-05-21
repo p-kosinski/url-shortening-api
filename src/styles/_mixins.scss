@@ -1,0 +1,19 @@
+@use '../styles/variables' as variables;
+
+@mixin btn-reset {
+  border: none;
+  font-family: inherit;
+}
+
+@mixin link-reset {
+  text-decoration: none;
+}
+
+@mixin btn-base {
+  color: white;
+  font-weight: variables.$font-weight-bold;
+}
+
+@mixin lighten-bg($color) {
+  background-color: scale-color($color, $lightness: variables.$lighten-amount)
+}

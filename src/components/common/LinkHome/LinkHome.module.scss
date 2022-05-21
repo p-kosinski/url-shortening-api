@@ -1,0 +1,9 @@
+@use '../../../styles/variables' as variables;
+
+.dark {
+  fill: variables.$color-darker;
+}
+
+.light {
+  fill: white;
+}
