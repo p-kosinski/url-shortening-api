@@ -1,33 +1,14 @@
 import './App.scss';
 
-import Container from './components/layout/Container/Container';
+import LinkHome from './components/common/LinkHome/LinkHome';
 
 const App = () => (
-  <div className='App' style={{
-    width: '100%',
-  }}>
-    <Container>
-      <div style={{
-        display: 'flex',
-        justifyContent: 'space-between'
-      }}>
-        <div
-          style={{
-            height: '2.5rem',
-            width: '2.5rem',
-            backgroundColor: 'black'
-          }}
-        ></div>
-        <div
-          style={{
-            height: '2.5rem',
-            width: '2.5rem',
-            backgroundColor: 'black'
-          }}
-        ></div>
-      </div>
-    </Container>
-  </div>
+  <>
+    <div style={{backgroundColor: 'purple'}}>
+      <LinkHome to='' textColor='dark' />
+      <LinkHome to='' textColor='light' />
+    </div>
+  </>
 );
 
 export default App;

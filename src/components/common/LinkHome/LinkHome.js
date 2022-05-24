@@ -4,21 +4,11 @@ import { ReactComponent as Logo } from '../../../images/logo.svg';
 
 import styles from './LinkHome.module.scss';
 
-const LinkHome = ({ to, textColor }) => {
-  if(textColor === 'dark') {
-    return (
-      <a href={to} className={styles.dark}>
-        <Logo />
-      </a>
-    );
-  } else if(textColor === 'light') {
-    return (
-      <a href={to} className={styles.light}>
-        <Logo />
-      </a>
-    );
-  }
-};
+const LinkHome = ({ to, textColor }) => (
+  <a href={to} className={styles[textColor]}>
+    <Logo />
+  </a>
+);
 
 LinkHome.propTypes = {
   to: PropTypes.string.isRequired,
