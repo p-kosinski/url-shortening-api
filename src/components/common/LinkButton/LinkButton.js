@@ -2,11 +2,8 @@ import PropTypes from 'prop-types';
 
 import styles from './LinkButton.module.scss';
 
-const LinkButton = ({ children, to, fullWidth }) => (
-  <a
-    href={to}
-    className={fullWidth ? styles.fullWidth : styles.default}
-  >
+const LinkButton = ({ children, to, variant }) => (
+  <a href={to} className={styles[variant]}>
     <>{children}</>
   </a>
 );
@@ -14,7 +11,7 @@ const LinkButton = ({ children, to, fullWidth }) => (
 LinkButton.propTypes = {
   children: PropTypes.string.isRequired,
   to: PropTypes.string.isRequired,
-  fullWidth: PropTypes.bool,
+  variant: PropTypes.oneOf(['default', 'small']).isRequired,
 };
 
 export default LinkButton;

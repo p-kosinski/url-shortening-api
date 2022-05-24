@@ -1,13 +1,12 @@
 import './App.scss';
 
-import LinkLogo from './components/common/LinkLogo/LinkLogo';
+import Container from './components/layout/Container/Container';
+
+import LinkButton from './components/common/LinkButton/LinkButton';
 
 const App = () => (
   <>
-    <div style={{backgroundColor: 'purple'}}>
-      <LinkLogo to='' textColor='dark' />
-      <LinkLogo to='' textColor='white' />
-    </div>
+    <LinkButton to='#0' variant='small'>Sign Up</LinkButton>
   </>
 );
 
