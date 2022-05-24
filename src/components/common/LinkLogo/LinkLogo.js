@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import { ReactComponent as Logo } from '../../../images/logo.svg';
 
-import styles from './LinkHome.module.scss';
+import styles from './LinkLogo.module.scss';
 
 const LinkHome = ({ to, textColor }) => (
   <a href={to} className={styles[textColor]}>
@@ -12,7 +12,7 @@ const LinkHome = ({ to, textColor }) => (
 
 LinkHome.propTypes = {
   to: PropTypes.string.isRequired,
-  textColor: PropTypes.oneOf('dark', 'light').isRequired,
+  textColor: PropTypes.oneOf('dark', 'white').isRequired,
 };
 
 export default LinkHome;

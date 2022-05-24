@@ -1,12 +1,12 @@
 import './App.scss';
 
-import LinkHome from './components/common/LinkHome/LinkHome';
+import LinkLogo from './components/common/LinkLogo/LinkLogo';
 
 const App = () => (
   <>
     <div style={{backgroundColor: 'purple'}}>
-      <LinkHome to='' textColor='dark' />
-      <LinkHome to='' textColor='light' />
+      <LinkLogo to='' textColor='dark' />
+      <LinkLogo to='' textColor='white' />
     </div>
   </>
 );
