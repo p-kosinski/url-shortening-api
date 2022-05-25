@@ -20,19 +20,19 @@ const Header = () => (
         <div className={styles.linksWrapper}>
           <ul>
             <li>
-              <a href='#0'>Features</a>
+              <a href='#0' className={styles.link}>Features</a>
             </li>
             <li>
-              <a href='#0'>Pricing</a>
+              <a href='#0' className={styles.link}>Pricing</a>
             </li>
             <li>
-              <a href='#0'>Resources</a>
+              <a href='#0' className={styles.link}>Resources</a>
             </li>
           </ul>
-          <hr className='divider' />
+          <hr className={styles.divider} />
           <ul>
             <li>
-              <a href='#0'>Login</a>
+              <a href='#0' className={styles.link}>Login</a>
             </li>
             <li>
               <LinkButton to='#0' variant='small'>

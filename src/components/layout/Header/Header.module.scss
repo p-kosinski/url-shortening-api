@@ -1,0 +1,61 @@
+@use '../../../styles/mixins' as mixins;
+@use '../../../styles/variables' as variables;
+
+.component {
+  height: 140px;
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2.75em;
+}
+
+.logoWrapper {
+  display: flex;
+
+  a {
+    margin: auto 0;
+  }
+}
+
+.menuBtn {
+  display: none;
+}
+
+.linksWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ul {
+    @include mixins.list-reset();
+
+    :not(:last-child) {
+      margin-right: 2em;
+    }
+
+    li {
+      display: inline-block;
+    }
+  }
+}
+
+.link {
+  @include mixins.link-reset();
+  font-weight: variables.$font-weight-bold;
+  font-size: 1rem;
+  color: variables.$color-light;
+  transition: variables.$transition;
+
+  &:hover {
+    color: variables.$color-darker;
+  }
+}
+
+.divider {
+  display: none;
+}

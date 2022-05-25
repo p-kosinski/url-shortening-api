@@ -1,9 +1,17 @@
 @use '../../../styles/variables' as variables;
 
+.base {
+  svg {
+    display: block;
+  }
+}
+
 .dark {
+  @extend .base;
   fill: variables.$color-darker;
 }
 
 .white {
+  @extend .base;
   fill: white;
 }
