@@ -5,6 +5,7 @@
   height: 140px;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .nav {
@@ -58,4 +59,70 @@
 
 .divider {
   display: none;
+}
+
+@include mixins.breakpoint(medium) {
+  .component {
+    height: 110px;
+  }
+
+  .nav {
+    justify-items: flex-end;
+  }
+
+  .menuBtn {
+    @include mixins.btn-reset();
+    background-color: transparent;
+    display: block;
+    width: fit-content;
+    padding: 8px;
+    cursor: pointer;
+
+    svg {
+      font-size: 28px;
+      display: block;
+      color: variables.$color-light;
+    }
+  }
+
+  .linksWrapper {
+    display: block;
+    position: absolute;
+    top: 96px;
+    width: 87vw;
+    background-color: variables.$color-secondary;
+    padding: 24px;
+    border-radius: variables.$radius-small;
+
+    ul {
+      li {
+        display: block;
+        width: 100%;
+        margin: 0.65em 0;
+      }
+    }
+  }
+
+  .linksWrapperOpened {
+    display: block;
+  }
+
+  .link {
+    display: block;
+    text-align: center;
+    font-size: 1.1rem;
+    color: white;
+    padding: 0.65em 0;
+  
+    &:hover {
+      color: variables.$color-accent;
+    }
+  }
+
+  .divider {
+    display: block;
+    border-top: 1px solid transparentize(white, 0.8);
+    border-bottom: none;
+    margin: 1.7em 0;
+  }
 }
