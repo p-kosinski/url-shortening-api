@@ -21,7 +21,7 @@ const Header = () => {
             <LinkLogo to='#0' textColor='dark' />
           </div>
           <button
-            className={styles.menuBtn}
+            className={clsx(styles.menuBtn, navOpen && styles.menuBtnActive)}
             onClick={() => setNavOpen(!navOpen)}
           >
             <FontAwesomeIcon icon={faBars} />
