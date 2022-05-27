@@ -95,13 +95,13 @@
   .linksWrapper {
     display: block;
     position: absolute;
-    top: 96px;
+    top: 110px;
     width: 87vw;
+    padding: 24px;
     background-color: variables.$color-secondary;
     border-radius: variables.$radius-small;
-    max-height: 0;
     opacity: 0;
-    overflow: hidden;
+    visibility: hidden;
     transition: variables.$transition;
 
     ul {
@@ -115,9 +115,8 @@
 
   .linksWrapperOpened {
     top: 96px;
-    padding: 24px;
-    max-height: 1000px;
     opacity: 1;
+    visibility: visible;
   }
 
   .link {
@@ -136,6 +135,8 @@
     display: block;
     border-top: 1px solid transparentize(white, 0.8);
     border-bottom: none;
+    border-left: none;
+    border-right: none;
     margin: 1.7em 0;
   }
 }
