@@ -1,0 +1,154 @@
+@use '../../../styles/mixins' as mixins;
+@use '../../../styles/variables' as variables;
+
+.component {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2.75em;
+}
+
+.logoWrapper {
+  display: flex;
+
+  a {
+    margin: auto 0;
+  }
+}
+
+.menuBtn {
+  display: none;
+}
+
+.linksWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ul {
+    @include mixins.list-reset();
+
+    :not(:last-child) {
+      margin-right: 2em;
+    }
+
+    li {
+      display: inline-block;
+    }
+  }
+}
+
+.link {
+  @include mixins.link-reset();
+  font-weight: variables.$font-weight-bold;
+  font-size: 1rem;
+  color: variables.$color-light;
+  transition: variables.$transition;
+
+  &:active {
+    color: variables.$color-darker;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: variables.$color-darker;
+    }
+  }
+}
+
+.divider {
+  display: none;
+}
+
+@include mixins.breakpoint(medium) {
+  .component {
+    height: 110px;
+  }
+
+  .nav {
+    justify-items: flex-end;
+  }
+
+  .menuBtn {
+    @include mixins.btn-reset();
+    background-color: transparent;
+    display: block;
+    width: fit-content;
+    padding: 8px;
+    cursor: pointer;
+
+    svg {
+      font-size: 28px;
+      display: block;
+      color: variables.$color-light;
+      transition: variables.$transition;
+    }
+  }
+
+  .menuBtnActive {
+    svg {
+      color: variables.$color-darker;
+    }
+  }
+
+  .linksWrapper {
+    display: block;
+    position: absolute;
+    top: 110px;
+    width: 87vw;
+    padding: 24px;
+    background-color: variables.$color-secondary;
+    border-radius: variables.$radius-small;
+    opacity: 0;
+    visibility: hidden;
+    transition: variables.$transition;
+
+    ul {
+      li {
+        display: block;
+        width: 100%;
+        margin: 0.65em 0;
+      }
+    }
+  }
+
+  .linksWrapperOpened {
+    top: 96px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .link {
+    display: block;
+    text-align: center;
+    font-size: 1.1rem;
+    color: white;
+    padding: 0.65em 0;
+
+    &:active {
+      color: variables.$color-accent;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: variables.$color-accent;
+      }
+    }
+  }
+
+  .divider {
+    display: block;
+    border-top: 1px solid transparentize(white, 0.8);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    margin: 1.7em 0;
+  }
+}

@@ -1,33 +1,11 @@
 import './App.scss';
 
-import Container from './components/layout/Container/Container';
+import Header from './components/layout/Header/Header';
 
 const App = () => (
-  <div className='App' style={{
-    width: '100%',
-  }}>
-    <Container>
-      <div style={{
-        display: 'flex',
-        justifyContent: 'space-between'
-      }}>
-        <div
-          style={{
-            height: '2.5rem',
-            width: '2.5rem',
-            backgroundColor: 'black'
-          }}
-        ></div>
-        <div
-          style={{
-            height: '2.5rem',
-            width: '2.5rem',
-            backgroundColor: 'black'
-          }}
-        ></div>
-      </div>
-    </Container>
-  </div>
+  <>
+    <Header />
+  </>
 );
 
 export default App;

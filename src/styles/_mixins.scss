@@ -9,6 +9,12 @@
   text-decoration: none;
 }
 
+@mixin list-reset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 @mixin btn-base {
   color: white;
   font-weight: variables.$font-weight-bold;
@@ -16,4 +22,14 @@
 
 @mixin lighten-bg($color) {
   background-color: scale-color($color, $lightness: variables.$lighten-amount)
+}
+
+@mixin breakpoint($breakpoint) {
+  @if map-has-key(variables.$breakpoints, $breakpoint) {
+    @media screen and (max-width: #{map-get(variables.$breakpoints, $breakpoint)}) {
+      @content;
+    }
+  } @else {
+    @warn '`#{$breakpoint}` is not defined in `$breakpoints` map';
+  }
 }

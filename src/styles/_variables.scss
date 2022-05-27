@@ -15,8 +15,15 @@ $font-weight-bold: 700;
 
 $font-base-size: 1.125rem;
 
-$radius-big: 2rem;
+$radius-big: 2em;
+$radius-small: 0.5em;
 
 $lighten-amount: 40%;
 
 $transition: all 0.1s ease-in-out;
+
+$breakpoints: (
+  small: 500px,
+  medium: 900px,
+  large: 1024px,
+);
