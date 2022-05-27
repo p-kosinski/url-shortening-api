@@ -4,8 +4,12 @@ import { ReactComponent as Logo } from '../../../images/logo.svg';
 
 import styles from './LinkLogo.module.scss';
 
-const LinkLogo = ({ to, textColor }) => (
-  <a href={to} className={styles[textColor]}>
+const LinkLogo = ({ to, textColor, ariaLabel }) => (
+  <a
+    href={to}
+    aria-label={ariaLabel}
+    className={styles[textColor]}
+  >
     <Logo />
   </a>
 );
@@ -13,6 +17,7 @@ const LinkLogo = ({ to, textColor }) => (
 LinkLogo.propTypes = {
   to: PropTypes.string.isRequired,
   textColor: PropTypes.oneOf(['dark', 'white']).isRequired,
+  ariaLabel: PropTypes.string,
 };
 
 export default LinkLogo;

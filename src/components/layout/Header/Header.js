@@ -18,11 +18,16 @@ const Header = () => {
       <Container>
         <nav className={styles.nav}>
           <div className={styles.logoWrapper}>
-            <LinkLogo to='#0' textColor='dark' />
+            <LinkLogo
+              to='#0'
+              ariaLabel='home page'
+              textColor='dark'
+            />
           </div>
           <button
             className={clsx(styles.menuBtn, navOpen && styles.menuBtnActive)}
             onClick={() => setNavOpen(!navOpen)}
+            aria-label={navOpen ? 'close navigation menu' : 'open navigation menu'}
           >
             <FontAwesomeIcon icon={faBars} />
           </button>
@@ -33,7 +38,7 @@ const Header = () => {
           >
             <ul>
               <li>
-                <a href='#0' className={styles.link}>Features</a>
+                <a href='#0' className={styles.link}>Features</a>  
               </li>
               <li>
                 <a href='#0' className={styles.link}>Pricing</a>
