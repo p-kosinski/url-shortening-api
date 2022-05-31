@@ -12,7 +12,11 @@ const App = () => (
     <main>
       <Hero />
       <Container>
-        <div style={{backgroundColor: 'black', color: 'white'}}>
+        <div style={{
+          backgroundColor: 'black',
+          color: 'white',
+          marginTop: '60px',
+          }}>
           {[...Array(100)].map((value, i) => {
             return (
               <Fragment key={i}>

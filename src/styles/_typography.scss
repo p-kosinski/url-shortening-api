@@ -1,5 +1,4 @@
 @use './variables' as variables;
-@use './mixins' as mixins;
 
 body {
   font-family: variables.$font-main;
@@ -7,5 +6,5 @@ body {
 
 h1 {
   font-weight: variables.$font-weight-bold;
-  font-size: 4.75rem;
+  font-size: clamp(2.5rem, 11vw, 4.75rem);
 }
