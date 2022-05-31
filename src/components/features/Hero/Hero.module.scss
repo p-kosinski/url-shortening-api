@@ -1,0 +1,91 @@
+@use '../../../styles/variables' as variables;
+@use '../../../styles/mixins' as mixins;
+
+.section {
+  padding-top: 30px;
+  padding-bottom: 90px;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-items: flex-start;
+}
+
+.content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  h1 {
+    margin-block: 0;
+    color: variables.$color-dark;
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.5;
+    font-weight: variables.$font-weight-regular;
+    font-size: clamp(1.1rem, 3vw, 1.35rem);
+    color: variables.$color-light;
+    max-width: 41ch;
+  }
+
+  a {
+    margin-block: 2em;
+  }
+}
+
+.imageWrapper {
+  width: 40%;
+}
+
+@include mixins.breakpoint(large) {
+  .content {
+    width: 55%;
+  }
+
+  .imageWrapper {
+    width: 45%;
+  }
+}
+
+@include mixins.breakpoint(medium) {
+  .section {
+    padding-top: 0;
+    padding-bottom: 60px;
+    overflow-x: hidden;
+  }
+
+  .wrapper {
+    align-items: unset;
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+
+  .content {
+    width: unset;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+
+    a {
+      width: fit-content;
+    }
+  }
+
+  .imageWrapper {
+    width: unset;
+    display: flex;
+
+    img {
+      margin: 0 auto;
+      height: 87vw;
+      max-height: 400px;
+    }
+  }
+}

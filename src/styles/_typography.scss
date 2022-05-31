@@ -3,3 +3,8 @@
 body {
   font-family: variables.$font-main;
 }
+
+h1 {
+  font-weight: variables.$font-weight-bold;
+  font-size: clamp(2.5rem, 11vw, 4.75rem);
+}
