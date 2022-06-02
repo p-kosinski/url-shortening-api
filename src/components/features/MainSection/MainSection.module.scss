@@ -1,0 +1,6 @@
+@use '../../../styles/variables' as variables;
+
+.component {
+  background-color: variables.$color-lightest;
+  margin-top: 60px;
+}
