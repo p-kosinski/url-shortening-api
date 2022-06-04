@@ -16,12 +16,12 @@ const ShortenLinks = () => (
         <li>
           <div className={styles.link}>
             <div className={styles.originalLink}>
-              <p>https://www.frontendmentor.io</p>
+              <span>https://www.frontendmentor.io</span>
             </div>
             <div className={styles.shortenedLink}>
-              <p>
+              <span>
                 <mark>https://rel.ink/k4lKyk</mark>
-              </p>
+              </span>
             </div>
             <button className={styles.copyButton}>
               Copy
@@ -31,12 +31,12 @@ const ShortenLinks = () => (
         <li>
           <div className={styles.link}>
             <div className={styles.originalLink}>
-              <p>https://www.twitter.com/frontendmentor</p>
+              <span>https://www.twitter.com/frontendmentor</span>
             </div>
             <div className={styles.shortenedLink}>
-              <p>
+              <span>
                 <mark>https://rel.ink/gxOXp9</mark>
-              </p>
+              </span>
             </div>
             <button className={styles.copyButton}>
               Copy
@@ -46,12 +46,12 @@ const ShortenLinks = () => (
         <li>
           <div className={styles.link}>
             <div className={styles.originalLink}>
-              <p>https://www.linkedin.com/company/frontend-mentor</p>
+              <span>https://www.linkedin.com/company/frontend-mentorxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span>
             </div>
             <div className={styles.shortenedLink}>
-              <p>
+              <span>
                 <mark>https://rel.ink/gob3X9</mark>
-              </p>
+              </span>
             </div>
             <button className={styles.copyButton}>
               Copy
