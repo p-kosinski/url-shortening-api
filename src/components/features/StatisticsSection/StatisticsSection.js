@@ -1,3 +1,7 @@
+import { ReactComponent as BrandRecognitionIcon } from '../../../images/icon-brand-recognition.svg';
+import { ReactComponent as DetailedRecordsIcon } from '../../../images/icon-detailed-records.svg';
+import { ReactComponent as FullyCustomizableIcon } from '../../../images/icon-fully-customizable.svg';
+
 import styles from './StatisticsSection.module.scss';
 
 const StatisticsSection = () => (
@@ -13,7 +17,7 @@ const StatisticsSection = () => (
       <article className={styles.card}>
         <header className={styles.cardHeader}>
           <div className={styles.icon}>
-            
+            <BrandRecognitionIcon />
           </div>
         </header>
         <section className={styles.cardContent}>
@@ -27,7 +31,7 @@ const StatisticsSection = () => (
       <article className={styles.card}>
         <header className={styles.cardHeader}>
           <div className={styles.icon}>
-            
+            <DetailedRecordsIcon />
           </div>
         </header>
         <section className={styles.cardContent}>
@@ -41,7 +45,7 @@ const StatisticsSection = () => (
       <article className={styles.card}>
         <header className={styles.cardHeader}>
           <div className={styles.icon}>
-            
+            <FullyCustomizableIcon />
           </div>
         </header>
         <section className={styles.cardContent}>
