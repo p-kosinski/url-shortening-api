@@ -1,0 +1,98 @@
+@use '../../../styles/variables' as variables;
+@use '../../../styles/mixins' as mixins;
+
+.component {
+  margin-top: 90px;
+}
+
+.heading {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    color: variables.$color-dark;
+    margin: 0.7em 0;
+  }
+  
+  p {
+    max-width: 46ch;
+    width: fit-content;
+    font-size: 1.15rem;
+    line-height: 1.4;
+    margin: 0;
+    color: variables.$color-light;
+    font-weight: variables.$font-weight-regular;
+  }
+}
+
+.articlesWrapper {
+  margin-top: 100px;
+  display: flex;
+  gap: 34px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 42%;
+    height: 8px;
+    width: 75%;
+    background-color: variables.$color-accent;
+    z-index: 0;
+  }
+
+  article {
+    &:nth-of-type(2) {
+      margin-top: 44px;
+    }
+  
+    &:nth-of-type(3) {
+      margin-top: 88px;
+    }
+  }
+}
+
+.card {
+  flex: 1;
+  @include mixins.card();
+  height: min-content;
+  padding: 1.8em;
+  z-index: 1;
+}
+
+.cardHeader {
+  margin-top: calc(0px - (1.8em + 44px));
+}
+
+.icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 44px;
+  background-color: variables.$color-secondary;
+  display: grid;
+
+  svg {
+    place-self: center;
+    fill: variables.$color-accent;
+  }
+}
+
+.cardContent {
+  margin-top: 44px;
+
+  h3 {
+    color: variables.$color-darker;
+    margin: 0;
+  }
+
+  p {
+    font-size: 0.95rem;
+    font-weight: variables.$font-weight-regular;
+    color: variables.$color-light;
+    line-height: 1.7;
+    margin: 1.2em 0;
+  }
+}
