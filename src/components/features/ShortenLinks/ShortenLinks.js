@@ -18,6 +18,7 @@ const ShortenLinks = () => (
             <div className={styles.originalLink}>
               <span>https://www.frontendmentor.io</span>
             </div>
+            <hr className={styles.divider} />
             <div className={styles.shortenedLink}>
               <span>
                 <mark>https://rel.ink/k4lKyk</mark>
@@ -33,6 +34,7 @@ const ShortenLinks = () => (
             <div className={styles.originalLink}>
               <span>https://www.twitter.com/frontendmentor</span>
             </div>
+            <hr className={styles.divider} />
             <div className={styles.shortenedLink}>
               <span>
                 <mark>https://rel.ink/gxOXp9</mark>
@@ -48,6 +50,7 @@ const ShortenLinks = () => (
             <div className={styles.originalLink}>
               <span>https://www.linkedin.com/company/frontend-mentorxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span>
             </div>
+            <hr className={styles.divider} />
             <div className={styles.shortenedLink}>
               <span>
                 <mark>https://rel.ink/gob3X9</mark>
