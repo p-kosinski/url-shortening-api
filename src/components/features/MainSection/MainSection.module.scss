@@ -1,6 +1,8 @@
 @use '../../../styles/variables' as variables;
+@use '../../../styles/mixins' as mixins;
 
 .component {
   background-color: variables.$color-lightest;
   margin-top: 60px;
+  padding: 100px 0;
 }
