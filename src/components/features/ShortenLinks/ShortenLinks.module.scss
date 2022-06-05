@@ -21,6 +21,8 @@
   @include mixins.breakpoint(tablet) {
     top: -205px;
     background-image: url('../../../images/bg-shorten-mobile.svg');
+    background-size: 73% 80%;
+    background-position: top right;
     flex-direction: column;
     padding: 24px;
     gap: 20px;
