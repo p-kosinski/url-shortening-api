@@ -24,7 +24,7 @@
   p {
     max-width: 46ch;
     width: fit-content;
-    font-size: min(4.3vw, 1.15rem);
+    font-size: clamp(1rem, 3.6vw, 1.15rem);
     line-height: 1.4;
     margin: 0;
     color: variables.$color-light;
