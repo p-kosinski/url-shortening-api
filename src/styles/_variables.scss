@@ -3,6 +3,7 @@ $color-secondary: hsl(257, 27%, 26%);
 
 $color-error: hsl(0, 87%, 67%);
 
+$color-lightest: hsl(230, 25%, 95%);
 $color-lighter: hsl(0, 0%, 75%);
 $color-light: hsl(257, 7%, 63%);
 $color-dark: hsl(255, 11%, 22%);
@@ -24,6 +25,7 @@ $transition: all 0.1s ease-in-out;
 
 $breakpoints: (
   small: 500px,
+  tablet: 768px,
   medium: 900px,
   large: 1024px,
 );

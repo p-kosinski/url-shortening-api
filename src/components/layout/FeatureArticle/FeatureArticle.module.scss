@@ -1,0 +1,61 @@
+@use '../../../styles/variables' as variables;
+@use '../../../styles/mixins' as mixins;
+
+.component {
+  flex: 1;
+  @include mixins.card();
+  height: min-content;
+  padding: 1.8em;
+  z-index: 1;
+}
+
+.header {
+  margin-top: calc(0px - (1.8em + 44px));
+
+  @include mixins.breakpoint(medium) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 44px;
+  background-color: variables.$color-secondary;
+  display: grid;
+
+  svg {
+    place-self: center;
+    fill: variables.$color-accent;
+  }
+}
+
+.content {
+  margin-top: 44px;
+
+  @include mixins.breakpoint(medium) {
+    margin-top: 36px;
+  }
+
+  h3 {
+    color: variables.$color-darker;
+    margin: 0;
+
+    @include mixins.breakpoint(medium) {
+      text-align: center;
+    }
+  }
+
+  p {
+    font-size: 0.95rem;
+    font-weight: variables.$font-weight-regular;
+    color: variables.$color-light;
+    line-height: 1.7;
+    margin: 1.2em 0;
+
+    @include mixins.breakpoint(medium) {
+      text-align: center;
+    }
+  }
+}

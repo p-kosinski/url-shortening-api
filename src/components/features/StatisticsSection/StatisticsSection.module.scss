@@ -1,0 +1,91 @@
+@use '../../../styles/variables' as variables;
+@use '../../../styles/mixins' as mixins;
+
+.component {
+  margin-top: 90px;
+
+  @include mixins.breakpoint(medium) {
+    margin-top: 60px;
+  }
+}
+
+.heading {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    color: variables.$color-dark;
+    margin: 0.7em 0;
+  }
+  
+  p {
+    max-width: 46ch;
+    width: fit-content;
+    font-size: clamp(1rem, 3.6vw, 1.15rem);
+    line-height: 1.4;
+    margin: 0;
+    color: variables.$color-light;
+    font-weight: variables.$font-weight-regular;
+
+    @include mixins.breakpoint(medium) {
+      margin: 0.5em 0;
+      line-height: 1.6;
+    }
+
+    @include mixins.breakpoint(small) {
+      max-width: 30ch;
+    }
+  }
+}
+
+.articlesWrapper {
+  margin-top: 100px;
+  display: flex;
+  gap: 34px;
+  position: relative;
+
+  @include mixins.breakpoint(medium) {
+    margin-top: 85px;
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 42%;
+    height: 8px;
+    width: 75%;
+    background-color: variables.$color-accent;
+    z-index: 0;
+
+    @include mixins.breakpoint(medium) {
+      top: 0;
+      width: 8px;
+      height: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  article {
+    &:nth-of-type(2) {
+      margin-top: 44px;
+
+      @include mixins.breakpoint(medium) {
+        margin-top: 0;
+      }
+    }
+  
+    &:nth-of-type(3) {
+      margin-top: 88px;
+
+      @include mixins.breakpoint(medium) {
+        margin-top: 0;
+      }
+    }
+  }
+}

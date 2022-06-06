@@ -18,10 +18,23 @@
 @mixin btn-base {
   color: white;
   font-weight: variables.$font-weight-bold;
+  cursor: pointer;
+  letter-spacing: 0.2px;
+}
+
+@mixin card {
+  background-color: white;
+  border-radius: variables.$radius-small;
 }
 
 @mixin lighten-bg($color) {
   background-color: scale-color($color, $lightness: variables.$lighten-amount)
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 @mixin breakpoint($breakpoint) {
