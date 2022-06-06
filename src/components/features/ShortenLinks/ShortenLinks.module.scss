@@ -18,7 +18,7 @@
   gap: 24px;
   border-radius: variables.$radius-small;
 
-  @include mixins.breakpoint(tablet) {
+  @include mixins.breakpoint(medium) {
     top: -205px;
     background-image: url('../../../images/bg-shorten-mobile.svg');
     background-size: 73% 80%;
@@ -38,7 +38,7 @@
   color: variables.$color-dark;
   font-weight: variables.$font-weight-regular;
 
-  @include mixins.breakpoint(tablet) {
+  @include mixins.breakpoint(medium) {
     padding: 0.6em 1em;
     font-size: 1rem;
   }
@@ -64,7 +64,7 @@
     }
   }
 
-  @include mixins.breakpoint(tablet) {
+  @include mixins.breakpoint(medium) {
     padding: 0.6em 1em;
     font-size: 1.1rem;
   }
@@ -88,7 +88,7 @@
   align-items: center;
   gap: 24px;
 
-  @include mixins.breakpoint(tablet) {
+  @include mixins.breakpoint(medium) {
     margin-top: 24px;
     padding: 0 1em 1em 1em;
     grid-template-columns: 1fr;
@@ -112,7 +112,7 @@
     margin: 0;
   }
 
-  @include mixins.breakpoint(tablet) {
+  @include mixins.breakpoint(medium) {
     font-size: 1rem;
     margin: 1em 0;
   }
@@ -142,7 +142,7 @@
     color: inherit;
   }
 
-  @include mixins.breakpoint(tablet) {
+  @include mixins.breakpoint(medium) {
     font-size: 1rem;
     text-align: start;
   }
@@ -151,7 +151,7 @@
 .divider {
   display: none;
 
-  @include mixins.breakpoint(tablet) {
+  @include mixins.breakpoint(medium) {
     display: block;
     border: none;
     border-top: 1px solid transparentize(variables.$color-lighter, 0.5);
