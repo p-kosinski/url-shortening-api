@@ -5,4 +5,8 @@
   background-color: variables.$color-lightest;
   margin-top: 60px;
   padding: 100px 0;
+
+  @include mixins.breakpoint(medium) {
+    padding: 100px 0 80px 0;
+  }
 }

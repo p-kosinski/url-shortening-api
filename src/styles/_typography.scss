@@ -12,6 +12,7 @@ h1 {
 h2 {
   font-weight: variables.$font-weight-bold;
   font-size: 2.4rem;
+  font-size: clamp(1.7rem, 7vw, 2.4rem);
 }
 
 h3 {
