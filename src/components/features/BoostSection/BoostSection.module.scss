@@ -2,13 +2,16 @@
 @use '../../../styles/mixins' as mixins;
 
 .component {
-  margin-top: 10px;
-  height: 250px;
   background-image: url('../../../images/bg-boost-desktop.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-color: variables.$color-secondary;
-  padding: 32px 0;
+  padding: 60px 0;
+
+  @include mixins.breakpoint(small) {
+    background-image: url('../../../images/bg-boost-mobile.svg');
+    padding: 90px 0;
+  }
 }
 
 .wrapper {
@@ -16,9 +19,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 30px;
+
+  @include mixins.breakpoint(small) {
+    gap: 24px;
+  }
 
   h2 {
     color: white;
+    margin: 0;
+    text-align: center;
   }
 
   a {
