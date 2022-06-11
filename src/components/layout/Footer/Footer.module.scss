@@ -1,0 +1,45 @@
+@use '../../../styles/variables' as variables;
+@use '../../../styles/mixins' as mixins;
+
+.component {
+  margin-top: 10px; // delete later
+  background-color: variables.$color-darker;
+  padding: 75px 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logoWrapper {
+  
+}
+
+.linksWrapper {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.iconsWrapper {
+  :not(:last-child) {
+    margin-right: 24px;
+  }
+}
+
+.linkList {
+  h4 {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  ul {
+    @include mixins.list-reset();
+
+    li {
+      margin: 12px 0;
+    }
+  }
+}

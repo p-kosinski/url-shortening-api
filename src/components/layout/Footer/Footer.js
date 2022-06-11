@@ -67,12 +67,12 @@ const Footer = () => (
               </li>
             </ul>
           </div>
-        </div>
-        <div className={styles.iconsWrapper}>
-          <LinkIcon to='#0' icon={<FacebookIcon />} />
-          <LinkIcon to='#0' icon={<TwitterIcon />} />
-          <LinkIcon to='#0' icon={<PinterestIcon />} />
-          <LinkIcon to='#0' icon={<InstagramIcon />} />
+          <div className={styles.iconsWrapper}>
+            <LinkIcon to='#0' icon={<FacebookIcon />} />
+            <LinkIcon to='#0' icon={<TwitterIcon />} />
+            <LinkIcon to='#0' icon={<PinterestIcon />} />
+            <LinkIcon to='#0' icon={<InstagramIcon />} />
+          </div>
         </div>
       </div>
     </Container>
