@@ -2,6 +2,7 @@ import Container from '../Container/Container';
 import LinkLogo from '../../common/LinkLogo/LinkLogo';
 import LinkIcon from '../../common/LinkIcon/LinkIcon';
 import LinkFooter from '../../common/LinkFooter/LinkFooter';
+import Attribution from '../../common/Attribution/Attribution';
 
 import { ReactComponent as FacebookIcon } from '../../../images/icon-facebook.svg';
 import { ReactComponent as TwitterIcon } from '../../../images/icon-twitter.svg';
@@ -75,6 +76,10 @@ const Footer = () => (
           <LinkIcon to='#0' icon={<InstagramIcon />} />
         </div>
       </div>
+      <Attribution
+        author='p-kosinski'
+        githubLink='https://github.com/p-kosinski'
+      />
     </Container>
   </footer>
 );
