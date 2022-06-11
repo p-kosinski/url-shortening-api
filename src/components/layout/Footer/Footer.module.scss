@@ -1,0 +1,77 @@
+@use '../../../styles/variables' as variables;
+@use '../../../styles/mixins' as mixins;
+
+.component {
+  background-color: variables.$color-darker;
+  padding: 75px 0;
+
+  @include mixins.breakpoint(medium) {
+    padding: 60px 0;
+  }
+
+  @include mixins.breakpoint(small) {
+    padding: 56px 0;
+  }
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 45% max-content;
+  gap: 90px;
+
+  @include mixins.breakpoint(large) {
+    gap: 60px;
+  }
+
+  @include mixins.breakpoint(medium) {
+    grid-template-columns: auto;
+    gap: 50px;
+  }
+}
+
+.logoWrapper {
+  @include mixins.breakpoint(medium) {
+    justify-self: center;
+  }
+}
+
+.linksWrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @include mixins.breakpoint(medium) {
+    justify-content: space-around;
+  }
+
+  @include mixins.breakpoint(small) {
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+  }
+}
+
+.iconsWrapper {
+  @include mixins.breakpoint(medium) {
+    justify-self: center;
+  }
+
+  :not(:last-child) {
+    margin-right: 24px;
+  }
+}
+
+.linkList {
+  h4 {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  ul {
+    @include mixins.list-reset();
+
+    li {
+      margin-top: 12px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@use '../../../styles/variables' as variables;
+@use '../../../styles/mixins' as mixins;
+
+.component {
+  @include mixins.link-reset();
+  font-family: variables.$font-main;
+  font-weight: variables.$font-weight-regular;
+  font-size: 0.9rem;
+  color: variables.$color-lighter;
+  transition: variables.$transition;
+
+  @media (hover: hover){
+    &:hover {
+      color: variables.$color-accent;
+    }
+  }
+
+  &:active {
+    color: variables.$color-accent;
+  }
+}
