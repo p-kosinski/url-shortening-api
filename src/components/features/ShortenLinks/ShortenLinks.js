@@ -1,3 +1,5 @@
+import ShortenedLink from '../ShortenedLink/ShortenedLink';
+
 import styles from './ShortenLinks.module.scss';
 
 const ShortenLinks = () => (
@@ -14,52 +16,22 @@ const ShortenLinks = () => (
     <div className={styles.links}>
       <ul>
         <li>
-          <div className={styles.link}>
-            <div className={styles.originalLink}>
-              <span>https://www.frontendmentor.io</span>
-            </div>
-            <hr className={styles.divider} />
-            <div className={styles.shortenedLink}>
-              <span>
-                <mark>https://rel.ink/k4lKyk</mark>
-              </span>
-            </div>
-            <button className={styles.copyButton}>
-              Copy
-            </button>
-          </div>
+          <ShortenedLink
+            originalLink='https://www.frontendmentor.io'
+            shortenedLink='https://rel.ink/k4lKyk'
+          />
         </li>
         <li>
-          <div className={styles.link}>
-            <div className={styles.originalLink}>
-              <span>https://www.twitter.com/frontendmentor</span>
-            </div>
-            <hr className={styles.divider} />
-            <div className={styles.shortenedLink}>
-              <span>
-                <mark>https://rel.ink/gxOXp9</mark>
-              </span>
-            </div>
-            <button className={styles.copyButton}>
-              Copy
-            </button>
-          </div>
+          <ShortenedLink
+            originalLink='https://www.twitter.com/frontendmentor'
+            shortenedLink='https://rel.ink/gxOXp9'
+          />
         </li>
         <li>
-          <div className={styles.link}>
-            <div className={styles.originalLink}>
-              <span>https://www.linkedin.com/company/frontend-mentorxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span>
-            </div>
-            <hr className={styles.divider} />
-            <div className={styles.shortenedLink}>
-              <span>
-                <mark>https://rel.ink/gob3X9</mark>
-              </span>
-            </div>
-            <button className={styles.copyButton}>
-              Copy
-            </button>
-          </div>
+          <ShortenedLink
+            originalLink='https://www.linkedin.com/company/frontend-mentor'
+            shortenedLink='https://rel.ink/gob3X9'
+          />
         </li>
       </ul>
     </div>
