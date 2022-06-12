@@ -1,13 +1,8 @@
 @use '../../../styles/variables' as variables;
 @use '../../../styles/mixins' as mixins;
 
-.component {
-  position: relative;
-}
-
 .form {
-  position: absolute;
-  top: -190px;
+  margin-top: -190px;
   background-color: variables.$color-secondary;
   background-image: url('../../../images/bg-shorten-desktop.svg');
   background-repeat: no-repeat;
@@ -19,7 +14,7 @@
   border-radius: variables.$radius-small;
 
   @include mixins.breakpoint(medium) {
-    top: -205px;
+    margin-top: -180px;
     background-image: url('../../../images/bg-shorten-mobile.svg');
     background-size: 73% 80%;
     background-position: top right;
