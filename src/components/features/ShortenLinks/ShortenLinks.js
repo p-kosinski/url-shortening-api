@@ -1,5 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import clsx from 'clsx';
+
+import { useLocalStorage } from '../../../hooks/useLocalStorage';
 
 import ShortenedLink from '../ShortenedLink/ShortenedLink';
 
@@ -7,23 +9,11 @@ import styles from './ShortenLinks.module.scss';
 
 const ShortenLinks = () => {
   const [linkToShorten, changeLinkToShorten] = useState('');
-  const [shortenedLinks, changeShortenedLinks] = useState([]);
+  const [shortenedLinks, changeShortenedLinks] = useLocalStorage(
+    'shortenedLinks', []
+  );
   const [error, setError] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
-
-  useEffect(() => {
-    const savedShortenedLinks = JSON.parse(localStorage.getItem('shortenedLinks'));
-
-    if(savedShortenedLinks) {
-      changeShortenedLinks(savedShortenedLinks);
-    }
-  }, []);
-
-  useEffect(() => {
-    if(shortenedLinks.length) {
-      localStorage.setItem('shortenedLinks', JSON.stringify(shortenedLinks));
-    }
-  }, [shortenedLinks]);
 
   const shortenLinkWithAPI = async (link) => {
     const url = `https://api.shrtco.de/v2/shorten?url=${link}`;
@@ -31,22 +21,22 @@ const ShortenLinks = () => {
     try {
       const response = await fetch(url);
       const data = await response.json();
-  
+
       const { ok, result } = data;
-  
-      if(ok) {
+
+      if (ok) {
         const linkData = {
           code: result.code,
           originalLink: result.original_link,
           shortLink: result.full_short_link,
         };
-  
-        changeShortenedLinks(currentState => [...currentState, linkData]);
+
+        changeShortenedLinks((currentState) => [...currentState, linkData]);
       } else {
         setErrorMsg(data.error);
         setError(true);
       }
-    } catch(error) {
+    } catch (error) {
       console.error(error);
       setError(true);
     }
@@ -58,7 +48,7 @@ const ShortenLinks = () => {
     setErrorMsg('');
     setError(false);
 
-    if(!linkToShorten.length) {
+    if (!linkToShorten.length) {
       setErrorMsg('Please add a link');
       setError(true);
     } else {
