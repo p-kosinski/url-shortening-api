@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import clsx from 'clsx';
 
 import ShortenedLink from '../ShortenedLink/ShortenedLink';
@@ -10,6 +10,12 @@ const ShortenLinks = () => {
   const [shortenedLinks, changeShortenedLinks] = useState([]);
   const [error, setError] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
+
+  useEffect(() => {
+    if(shortenedLinks.length) {
+      localStorage.setItem('shortenedLinks', JSON.stringify(shortenedLinks));
+    }
+  }, [shortenedLinks]);
 
   const shortenLinkWithAPI = async (link) => {
     const url = `https://api.shrtco.de/v2/shorten?url=${link}`;
