@@ -12,6 +12,14 @@ const ShortenLinks = () => {
   const [errorMsg, setErrorMsg] = useState('');
 
   useEffect(() => {
+    const savedShortenedLinks = JSON.parse(localStorage.getItem('shortenedLinks'));
+
+    if(savedShortenedLinks) {
+      changeShortenedLinks(savedShortenedLinks);
+    }
+  }, []);
+
+  useEffect(() => {
     if(shortenedLinks.length) {
       localStorage.setItem('shortenedLinks', JSON.stringify(shortenedLinks));
     }
