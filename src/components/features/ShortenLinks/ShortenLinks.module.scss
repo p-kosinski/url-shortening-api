@@ -75,6 +75,7 @@
   white-space: nowrap;
   font-size: 1.3rem;
   font-weight: variables.$font-weight-bold;
+  transition: variables.$transition;
 
   &:active {
     @include mixins.lighten-bg(variables.$color-accent);
