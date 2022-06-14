@@ -1,0 +1,133 @@
+@use '../../../styles/variables' as variables;
+@use '../../../styles/mixins' as mixins;
+
+.component {
+  margin-top: 24px;
+  @include mixins.card();
+  padding: 1em 1.5em;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 25% min-content;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'original shortened btn';
+  align-items: center;
+  gap: 24px;
+
+  @include mixins.breakpoint(medium) {
+    padding: 0 1em 1em 1em;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr min-content 1fr min-content;
+    grid-template-areas: 'original'
+                         'divider'
+                         'shortened'
+                         'btn';
+    gap: 0;
+  }
+}
+
+.originalLink {
+  grid-area: original;
+  @include mixins.ellipsis();
+  font-size: 1.25rem;
+  font-weight: variables.$font-weight-regular;
+  color: variables.$color-darker;
+
+  span {
+    margin: 0;
+  }
+
+  @include mixins.breakpoint(medium) {
+    font-size: 1rem;
+    margin: 1em 0;
+  }
+}
+
+.divider {
+  grid-area: divider;
+  margin: 0;
+  border: none;
+  border-top: 1px solid transparentize(variables.$color-lighter, 0.5);
+}
+
+.shortenedLink {
+  grid-area: shortened;
+  @include mixins.ellipsis();
+  text-align: end;
+  font-size: 1.25rem;
+  font-weight: variables.$font-weight-regular;
+  color: variables.$color-accent;
+
+  span {
+    margin: 0;
+  }
+
+  mark {
+    background-color: transparent;
+    color: inherit;
+  }
+
+  @include mixins.breakpoint(medium) {
+    font-size: 1rem;
+    text-align: start;
+  }
+}
+
+.divider {
+  display: none;
+
+  @include mixins.breakpoint(medium) {
+    display: block;
+    border: none;
+    border-top: 1px solid transparentize(variables.$color-lighter, 0.5);
+  }
+}
+
+.copyButton {
+  grid-area: btn;
+  @include mixins.btn-reset();
+  @include mixins.btn-base();
+  background-color: variables.$color-accent;
+  border-radius: variables.$radius-small;
+  font-size: 1rem;
+  height: fit-content;
+  padding: 0.5em 2em;
+  transition: variables.$transition;
+
+  &:active {
+    @include mixins.lighten-bg(variables.$color-accent);
+  }
+
+  @media (hover: hover){
+    &:hover {
+      @include mixins.lighten-bg(variables.$color-accent);
+    }
+  }
+}
+
+.copyButtonSuccess {
+  background-color: variables.$color-secondary;
+
+  &:active {
+    @include mixins.lighten-bg(variables.$color-secondary);
+  }
+
+  @media (hover: hover){
+    &:hover {
+      @include mixins.lighten-bg(variables.$color-secondary);
+    }
+  }
+}
+
+.copyButtonError {
+  background-color: variables.$color-error;
+
+  &:active {
+    @include mixins.lighten-bg(variables.$color-error);
+  }
+
+  @media (hover: hover){
+    &:hover {
+      @include mixins.lighten-bg(variables.$color-error);
+    }
+  }
+}
