@@ -33,12 +33,12 @@ const ShortenLinks = () => {
 
         changeShortenedLinks((currentState) => [...currentState, linkData]);
       } else {
-        setErrorMsg(data.error);
         setError(true);
+        console.warn(data.error);
       }
     } catch (error) {
-      console.error(error);
       setError(true);
+      console.error(error);
     }
   };
 
