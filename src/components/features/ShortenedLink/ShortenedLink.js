@@ -19,6 +19,7 @@ const ShortenedLink = ({ originalLink, shortenedLink }) => {
     try {
       await copyToClipboard(shortenedLink);
       setCopySuccess(true);
+      setTimeout(() => setCopySuccess(false), 3000);
     } catch (error) {
       console.error(error);
       setCopyError(true);
