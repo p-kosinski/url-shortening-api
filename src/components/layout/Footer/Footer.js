@@ -68,25 +68,25 @@ const Footer = () => (
         <div className={styles.iconsWrapper}>
           <LinkIcon
             to='#0'
-            icon={<FacebookIcon />}
+            icon={<FacebookIcon role='presentation' />}
             ariaLabel='facebook'
             externalLink
           />
           <LinkIcon
             to='#0'
-            icon={<TwitterIcon />}
+            icon={<TwitterIcon role='presentation' />}
             ariaLabel='twitter'
             externalLink
           />
           <LinkIcon
             to='#0'
-            icon={<PinterestIcon />}
+            icon={<PinterestIcon role='presentation' />}
             ariaLabel='pinterest'
             externalLink
           />
           <LinkIcon
             to='#0'
-            icon={<InstagramIcon />}
+            icon={<InstagramIcon role='presentation' />}
             ariaLabel='instagram'
             externalLink
           />
