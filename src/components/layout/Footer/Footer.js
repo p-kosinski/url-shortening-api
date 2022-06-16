@@ -16,11 +16,7 @@ const Footer = () => (
     <Container>
       <div className={styles.wrapper}>
         <div className={styles.logoWrapper}>
-          <LinkLogo
-            to='#0'
-            ariaLabel='home page'
-            textColor='white'
-          />
+          <LinkLogo to='#0' ariaLabel='home page' textColor='white' />
         </div>
         <div className={styles.linksWrapper}>
           <div className={styles.linkList}>
@@ -70,10 +66,10 @@ const Footer = () => (
           </div>
         </div>
         <div className={styles.iconsWrapper}>
-          <LinkIcon to='#0' icon={<FacebookIcon />} />
-          <LinkIcon to='#0' icon={<TwitterIcon />} />
-          <LinkIcon to='#0' icon={<PinterestIcon />} />
-          <LinkIcon to='#0' icon={<InstagramIcon />} />
+          <LinkIcon to='#0' icon={<FacebookIcon />} ariaLabel='facebook' />
+          <LinkIcon to='#0' icon={<TwitterIcon />} ariaLabel='twitter' />
+          <LinkIcon to='#0' icon={<PinterestIcon />} ariaLabel='pinterest' />
+          <LinkIcon to='#0' icon={<InstagramIcon />} ariaLabel='instagram' />
         </div>
       </div>
       <Attribution
