@@ -57,7 +57,7 @@ const ShortenLinks = () => {
   };
 
   return (
-    <section className={styles.component}>
+    <>
       <form className={styles.form}>
         <input
           placeholder='Shorten a link here...'
@@ -88,7 +88,7 @@ const ShortenLinks = () => {
           ))}
         </ul>
       </div>
-    </section>
+    </>
   );
 };
 
