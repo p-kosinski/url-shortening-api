@@ -57,17 +57,21 @@ const ShortenLinks = () => {
   };
 
   return (
-    <section className={styles.component}>
+    <>
       <form className={styles.form}>
         <input
           placeholder='Shorten a link here...'
           className={clsx(styles.input, error && styles.inputError)}
           onChange={(event) => changeLinkToShorten(event.target.value)}
+          aria-required='true'
+          aria-invalid={error}
+          aria-errormessage='link-input-error'
         />
-        {error && <label className={styles.errorMsg}>{errorMsg}</label>}
+        {error && <label id='link-input-error' className={styles.errorMsg}>{errorMsg}</label>}
         <button
           className={styles.submitButton}
           onClick={(event) => handleSubmit(event)}
+          aria-label='shorten link'
         >
           Shorten it!
         </button>
@@ -84,7 +88,7 @@ const ShortenLinks = () => {
           ))}
         </ul>
       </div>
-    </section>
+    </>
   );
 };
 

@@ -16,15 +16,11 @@ const Footer = () => (
     <Container>
       <div className={styles.wrapper}>
         <div className={styles.logoWrapper}>
-          <LinkLogo
-            to='#0'
-            ariaLabel='home page'
-            textColor='white'
-          />
+          <LinkLogo to='#0' ariaLabel='home page' textColor='white' />
         </div>
         <div className={styles.linksWrapper}>
           <div className={styles.linkList}>
-            <h4>Features</h4>
+            <p className={styles.linkListTitle}>Features</p>
             <ul>
               <li>
                 <LinkFooter to='#0'>Link Shortening</LinkFooter>
@@ -38,7 +34,7 @@ const Footer = () => (
             </ul>
           </div>
           <div className={styles.linkList}>
-            <h4>Resources</h4>
+            <p className={styles.linkListTitle}>Resources</p>
             <ul>
               <li>
                 <LinkFooter to='#0'>Blog</LinkFooter>
@@ -52,7 +48,7 @@ const Footer = () => (
             </ul>
           </div>
           <div className={styles.linkList}>
-            <h4>Company</h4>
+            <p className={styles.linkListTitle}>Company</p>
             <ul>
               <li>
                 <LinkFooter to='#0'>About</LinkFooter>
@@ -70,10 +66,30 @@ const Footer = () => (
           </div>
         </div>
         <div className={styles.iconsWrapper}>
-          <LinkIcon to='#0' icon={<FacebookIcon />} />
-          <LinkIcon to='#0' icon={<TwitterIcon />} />
-          <LinkIcon to='#0' icon={<PinterestIcon />} />
-          <LinkIcon to='#0' icon={<InstagramIcon />} />
+          <LinkIcon
+            to='#0'
+            icon={<FacebookIcon role='presentation' />}
+            ariaLabel='facebook'
+            externalLink
+          />
+          <LinkIcon
+            to='#0'
+            icon={<TwitterIcon role='presentation' />}
+            ariaLabel='twitter'
+            externalLink
+          />
+          <LinkIcon
+            to='#0'
+            icon={<PinterestIcon role='presentation' />}
+            ariaLabel='pinterest'
+            externalLink
+          />
+          <LinkIcon
+            to='#0'
+            icon={<InstagramIcon role='presentation' />}
+            ariaLabel='instagram'
+            externalLink
+          />
         </div>
       </div>
       <Attribution

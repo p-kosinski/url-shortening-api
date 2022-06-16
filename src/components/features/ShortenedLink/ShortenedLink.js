@@ -44,6 +44,7 @@ const ShortenedLink = ({ originalLink, shortenedLink }) => {
           copyError && styles.copyButtonError
         )}
         onClick={() => handleCopyClick()}
+        aria-label='copy shortened link'
       >
         {copySuccess ? 'Copied!' : 'Copy'}
       </button>

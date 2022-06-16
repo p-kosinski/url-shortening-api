@@ -17,21 +17,21 @@ const StatisticsSection = () => (
     </div>
     <div className={styles.articlesWrapper}>
       <FeatureArticle
-        icon={<BrandRecognitionIcon />}
+        icon={<BrandRecognitionIcon role='presentation' />}
         title='Brand Recognition'
         text='Boost your brand recognition with each click. 
               Generic links don’t mean a thing. 
               Branded links help instil confidence in your content.'
       />
       <FeatureArticle
-        icon={<DetailedRecordsIcon />}
+        icon={<DetailedRecordsIcon role='presentation' />}
         title='Detailed Records'
         text='Gain insights into who is clicking your links. 
               Knowing when and where people engage with your content 
               helps inform better decisions.'
       />
       <FeatureArticle
-        icon={<FullyCustomizableIcon />}
+        icon={<FullyCustomizableIcon role='presentation' />}
         title='Fully Customizable'
         text='Improve brand awareness and content discoverability 
               through customizable links, supercharging audience 
