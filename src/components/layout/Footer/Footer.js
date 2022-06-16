@@ -66,10 +66,30 @@ const Footer = () => (
           </div>
         </div>
         <div className={styles.iconsWrapper}>
-          <LinkIcon to='#0' icon={<FacebookIcon />} ariaLabel='facebook' />
-          <LinkIcon to='#0' icon={<TwitterIcon />} ariaLabel='twitter' />
-          <LinkIcon to='#0' icon={<PinterestIcon />} ariaLabel='pinterest' />
-          <LinkIcon to='#0' icon={<InstagramIcon />} ariaLabel='instagram' />
+          <LinkIcon
+            to='#0'
+            icon={<FacebookIcon />}
+            ariaLabel='facebook'
+            externalLink
+          />
+          <LinkIcon
+            to='#0'
+            icon={<TwitterIcon />}
+            ariaLabel='twitter'
+            externalLink
+          />
+          <LinkIcon
+            to='#0'
+            icon={<PinterestIcon />}
+            ariaLabel='pinterest'
+            externalLink
+          />
+          <LinkIcon
+            to='#0'
+            icon={<InstagramIcon />}
+            ariaLabel='instagram'
+            externalLink
+          />
         </div>
       </div>
       <Attribution
