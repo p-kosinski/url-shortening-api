@@ -20,7 +20,7 @@ const Footer = () => (
         </div>
         <div className={styles.linksWrapper}>
           <div className={styles.linkList}>
-            <h4>Features</h4>
+            <p className={styles.linkListTitle}>Features</p>
             <ul>
               <li>
                 <LinkFooter to='#0'>Link Shortening</LinkFooter>
@@ -34,7 +34,7 @@ const Footer = () => (
             </ul>
           </div>
           <div className={styles.linkList}>
-            <h4>Resources</h4>
+            <p className={styles.linkListTitle}>Resources</p>
             <ul>
               <li>
                 <LinkFooter to='#0'>Blog</LinkFooter>
@@ -48,7 +48,7 @@ const Footer = () => (
             </ul>
           </div>
           <div className={styles.linkList}>
-            <h4>Company</h4>
+            <p className={styles.linkListTitle}>Company</p>
             <ul>
               <li>
                 <LinkFooter to='#0'>About</LinkFooter>
