@@ -5,6 +5,10 @@
   fill: white;
   transition: variables.$transition;
 
+  &:focus-visible {
+    @include mixins.focus-outline(variables.$radius-small);
+  }
+
   @media (hover: hover){
     &:hover {
       fill: variables.$color-accent;

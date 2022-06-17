@@ -18,7 +18,7 @@
 
   h2 {
     color: variables.$color-dark;
-    margin: 0.7em 0;
+    margin: 12px 0;
   }
   
   p {
@@ -31,7 +31,7 @@
     font-weight: variables.$font-weight-regular;
 
     @include mixins.breakpoint(medium) {
-      margin: 0.5em 0;
+      margin: 8px 0;
       line-height: 1.6;
     }
 

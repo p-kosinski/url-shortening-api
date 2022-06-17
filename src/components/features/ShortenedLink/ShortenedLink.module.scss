@@ -4,7 +4,7 @@
 .component {
   margin-top: 24px;
   @include mixins.card();
-  padding: 1em 1.5em;
+  padding: 16px 32px;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr min-content min-content;
@@ -90,8 +90,12 @@
   border-radius: variables.$radius-small;
   font-size: 1rem;
   height: fit-content;
-  padding: 0.5em 2em;
+  padding: 8px 32px;
   transition: variables.$transition;
+
+  &:focus-visible {
+    @include mixins.focus-outline(variables.$radius-small);
+  }
 
   &:active {
     @include mixins.lighten-bg(variables.$color-accent);

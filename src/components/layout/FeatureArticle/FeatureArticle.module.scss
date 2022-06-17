@@ -5,7 +5,7 @@
   flex: 1;
   @include mixins.card();
   height: min-content;
-  padding: 1.8em;
+  padding: 28px;
   z-index: 1;
 }
 
@@ -52,7 +52,7 @@
     font-weight: variables.$font-weight-regular;
     color: variables.$color-light;
     line-height: 1.7;
-    margin: 1.2em 0;
+    margin: 16px 0;
 
     @include mixins.breakpoint(medium) {
       text-align: center;
