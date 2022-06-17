@@ -11,7 +11,7 @@
 .nav {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 2.75em;
+  gap: 40px;
 }
 
 .logoWrapper {
@@ -36,7 +36,7 @@
     @include mixins.list-reset();
 
     :not(:last-child) {
-      margin-right: 2em;
+      margin-right: 32px;
     }
 
     li {
@@ -122,7 +122,7 @@
       li {
         display: block;
         width: 100%;
-        margin: 0.65em 0;
+        margin: 12px 0;
       }
     }
   }
@@ -138,7 +138,7 @@
     text-align: center;
     font-size: 1.1rem;
     color: white;
-    padding: 0.65em 0;
+    padding: 12px 0;
 
     &:active {
       color: variables.$color-accent;
@@ -157,6 +157,6 @@
     border-bottom: none;
     border-left: none;
     border-right: none;
-    margin: 1.7em 0;
+    margin: 24px 0;
   }
 }
