@@ -1,6 +1,7 @@
 import Container from '../Container/Container';
 import LinkLogo from '../../common/LinkLogo/LinkLogo';
 import LinkIcon from '../../common/LinkIcon/LinkIcon';
+import LinkList from '../../common/FooterLinkList/FooterLinkList';
 import LinkFooter from '../../common/LinkFooter/LinkFooter';
 import Attribution from '../../common/Attribution/Attribution';
 
@@ -19,51 +20,31 @@ const Footer = () => (
           <LinkLogo to='#0' ariaLabel='home page' textColor='white' />
         </div>
         <div className={styles.linksWrapper}>
-          <div className={styles.linkList}>
-            <p className={styles.linkListTitle}>Features</p>
-            <ul>
-              <li>
-                <LinkFooter to='#0'>Link Shortening</LinkFooter>
-              </li>
-              <li>
-                <LinkFooter to='#0'>Branded Links</LinkFooter>
-              </li>
-              <li>
-                <LinkFooter to='#0'>Analytics</LinkFooter>
-              </li>
-            </ul>
-          </div>
-          <div className={styles.linkList}>
-            <p className={styles.linkListTitle}>Resources</p>
-            <ul>
-              <li>
-                <LinkFooter to='#0'>Blog</LinkFooter>
-              </li>
-              <li>
-                <LinkFooter to='#0'>Developers</LinkFooter>
-              </li>
-              <li>
-                <LinkFooter to='#0'>Support</LinkFooter>
-              </li>
-            </ul>
-          </div>
-          <div className={styles.linkList}>
-            <p className={styles.linkListTitle}>Company</p>
-            <ul>
-              <li>
-                <LinkFooter to='#0'>About</LinkFooter>
-              </li>
-              <li>
-                <LinkFooter to='#0'>Our Team</LinkFooter>
-              </li>
-              <li>
-                <LinkFooter to='#0'>Careers</LinkFooter>
-              </li>
-              <li>
-                <LinkFooter to='#0'>Contact</LinkFooter>
-              </li>
-            </ul>
-          </div>
+          <LinkList
+            title='Features'
+            links={[
+              <LinkFooter to='#0'>Link Shortening</LinkFooter>,
+              <LinkFooter to='#0'>Branded Links</LinkFooter>,
+              <LinkFooter to='#0'>Analytics</LinkFooter>
+            ]}
+          />
+          <LinkList
+            title='Resources'
+            links={[
+              <LinkFooter to='#0'>Blog</LinkFooter>,
+              <LinkFooter to='#0'>Developers</LinkFooter>,
+              <LinkFooter to='#0'>Support</LinkFooter>
+            ]}
+          />
+          <LinkList
+            title='Company'
+            links={[
+              <LinkFooter to='#0'>About</LinkFooter>,
+              <LinkFooter to='#0'>Our Team</LinkFooter>,
+              <LinkFooter to='#0'>Careers</LinkFooter>,
+              <LinkFooter to='#0'>Contact</LinkFooter>
+            ]}
+          />
         </div>
         <div className={styles.iconsWrapper}>
           <LinkIcon

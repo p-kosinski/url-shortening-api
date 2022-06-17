@@ -59,21 +59,3 @@
     margin-right: 24px;
   }
 }
-
-.linkList {
-  ul {
-    @include mixins.list-reset();
-
-    li {
-      margin-top: 12px;
-    }
-  }
-}
-
-.linkListTitle {
-  font-weight: variables.$font-weight-bold;
-  font-size: 0.95rem;
-  color: white;
-  margin-top: 0;
-  margin-bottom: 30px;
-}
