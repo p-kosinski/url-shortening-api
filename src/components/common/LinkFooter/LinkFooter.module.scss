@@ -9,6 +9,10 @@
   color: variables.$color-lighter;
   transition: variables.$transition;
 
+  &:focus-visible {
+    @include mixins.focus-outline(variables.$radius-small);
+  }
+
   @media (hover: hover){
     &:hover {
       color: variables.$color-accent;

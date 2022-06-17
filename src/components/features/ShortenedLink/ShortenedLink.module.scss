@@ -93,6 +93,10 @@
   padding: 0.5em 2em;
   transition: variables.$transition;
 
+  &:focus-visible {
+    @include mixins.focus-outline(variables.$radius-small);
+  }
+
   &:active {
     @include mixins.lighten-bg(variables.$color-accent);
   }

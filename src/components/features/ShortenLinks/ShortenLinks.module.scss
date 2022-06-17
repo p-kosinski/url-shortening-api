@@ -36,6 +36,10 @@
   text-overflow: ellipsis;
   transition: variables.$transition;
 
+  &:focus-visible {
+    @include mixins.focus-outline(variables.$radius-small);
+  }
+
   @include mixins.breakpoint(medium) {
     padding: 0.6em 1em;
     font-size: 1rem;
@@ -76,6 +80,10 @@
   font-size: 1.3rem;
   font-weight: variables.$font-weight-bold;
   transition: variables.$transition;
+
+  &:focus-visible {
+    @include mixins.focus-outline(variables.$radius-small);
+  }
 
   &:active {
     @include mixins.lighten-bg(variables.$color-accent);

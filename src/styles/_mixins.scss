@@ -37,6 +37,12 @@
   text-overflow: ellipsis;
 }
 
+@mixin focus-outline($radius) {
+  outline: 3px solid variables.$color-accent;
+  outline-offset: 4px;
+  border-radius: $radius;
+}
+
 @mixin breakpoint($breakpoint) {
   @if map-has-key(variables.$breakpoints, $breakpoint) {
     @media screen and (max-width: #{map-get(variables.$breakpoints, $breakpoint)}) {

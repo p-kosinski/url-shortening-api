@@ -1,6 +1,18 @@
 @use '../../../styles/variables' as variables;
+@use '../../../styles/mixins' as mixins;
 
 .base {
+  display: inline-block;
+  transition: variables.$transition;
+
+  &:focus-visible {
+    @include mixins.focus-outline(variables.$radius-small);
+  }
+
+  &:focus-within {
+    @include mixins.focus-outline(variables.$radius-small);
+  }
+
   svg {
     display: block;
   }

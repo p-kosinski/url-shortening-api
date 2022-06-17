@@ -52,6 +52,10 @@
   color: variables.$color-light;
   transition: variables.$transition;
 
+  &:focus-visible {
+    @include mixins.focus-outline(variables.$radius-small);
+  }
+
   &:active {
     color: variables.$color-darker;
   }
@@ -83,6 +87,10 @@
     width: fit-content;
     padding: 8px;
     cursor: pointer;
+
+    &:focus-visible {
+      @include mixins.focus-outline(variables.$radius-small);
+    }
 
     svg {
       font-size: 28px;

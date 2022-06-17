@@ -13,6 +13,10 @@
   cursor: pointer;
   transition: variables.$transition;
 
+  &:focus-visible {
+    @include mixins.focus-outline(variables.$radius-big);
+  }
+
   @media (hover: hover){
     &:hover {
       @include mixins.lighten-bg(variables.$color-accent);
