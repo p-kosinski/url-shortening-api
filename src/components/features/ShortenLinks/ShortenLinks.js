@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useLocalStorage } from '../../../hooks/useLocalStorage';
 
 import ShortenInput from '../../common/ShortenInput/ShortenInput';
+import ShortenSubmitButton from '../../common/ShortenSubmitButton/ShortenSubmitButton';
 import ShortenedLink from '../ShortenedLink/ShortenedLink';
 
 import styles from './ShortenLinks.module.scss';
@@ -42,6 +43,10 @@ const ShortenLinks = () => {
     }
   };
 
+  const handleInputChange = (event) => {
+    changeLinkToShorten(event.target.value);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -56,10 +61,6 @@ const ShortenLinks = () => {
     }
   };
 
-  const handleInputChange = (event) => {
-    changeLinkToShorten(event.target.value);
-  };
-
   return (
     <>
       <form className={styles.form}>
@@ -68,13 +69,7 @@ const ShortenLinks = () => {
           errorMsg={errorMsg}
           onChange={handleInputChange}
         />
-        <button
-          className={styles.submitButton}
-          onClick={(event) => handleSubmit(event)}
-          aria-label='shorten link'
-        >
-          Shorten it!
-        </button>
+        <ShortenSubmitButton onClick={handleSubmit} />
       </form>
       <div className={styles.links}>
         <ul>
