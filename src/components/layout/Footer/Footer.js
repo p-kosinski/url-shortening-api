@@ -1,7 +1,7 @@
 import Container from '../Container/Container';
 import LinkLogo from '../../common/LinkLogo/LinkLogo';
 import LinkIcon from '../../common/LinkIcon/LinkIcon';
-import LinkList from '../FooterLinkList/FooterLinkList';
+import FooterLinkList from '../FooterLinkList/FooterLinkList';
 import Link from '../../common/Link/Link';
 import Attribution from '../../common/Attribution/Attribution';
 
@@ -20,7 +20,7 @@ const Footer = () => (
           <LinkLogo to='#0' ariaLabel='home page' textColor='white' />
         </div>
         <div className={styles.linksWrapper}>
-          <LinkList
+          <FooterLinkList
             title='Features'
             links={[
               <Link to='#0' variant='footer'>Link Shortening</Link>,
@@ -28,7 +28,7 @@ const Footer = () => (
               <Link to='#0' variant='footer'>Analytics</Link>
             ]}
           />
-          <LinkList
+          <FooterLinkList
             title='Resources'
             links={[
               <Link to='#0' variant='footer'>Blog</Link>,
@@ -36,7 +36,7 @@ const Footer = () => (
               <Link to='#0' variant='footer'>Support</Link>
             ]}
           />
-          <LinkList
+          <FooterLinkList
             title='Company'
             links={[
               <Link to='#0' variant='footer'>About</Link>,
