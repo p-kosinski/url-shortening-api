@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import clsx from 'clsx';
+
+import CopyButton from '../../common/CopyButton/CopyButton';
 
 import styles from './ShortenedLink.module.scss';
 
@@ -37,17 +38,12 @@ const ShortenedLink = ({ originalLink, shortenedLink }) => {
           <mark>{shortenedLink}</mark>
         </span>
       </div>
-      <button
-        className={clsx(
-          styles.copyButton,
-          copySuccess && styles.copyButtonSuccess,
-          copyError && styles.copyButtonError
-        )}
-        onClick={() => handleCopyClick()}
-        aria-label='copy shortened link'
-      >
-        {copySuccess ? 'Copied!' : 'Copy'}
-      </button>
+      <CopyButton
+        success={copySuccess}
+        error={copyError}
+        onClick={handleCopyClick}
+        ariaLabel='Copy shortened link'
+      />
     </div>
   );
 };

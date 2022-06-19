@@ -1,0 +1,60 @@
+@use '../../../styles/variables' as variables;
+@use '../../../styles/mixins' as mixins;
+
+.component {
+  grid-area: btn;
+  @include mixins.btn-reset();
+  @include mixins.btn-base();
+  border-radius: variables.$radius-small;
+  font-size: 1rem;
+  height: fit-content;
+  padding: 8px 32px;
+  transition: variables.$transition;
+
+  &:focus-visible {
+    @include mixins.focus-outline(variables.$radius-small);
+  }
+
+  &:active {
+    @include mixins.lighten-bg(variables.$color-accent);
+  }
+
+  @media (hover: hover){
+    &:hover {
+      @include mixins.lighten-bg(variables.$color-accent);
+    }
+  }
+
+  @include mixins.breakpoint(medium) {
+    width: calc(100% - 2 * 16px);
+    margin: 0 16px 16px 16px;
+  }
+}
+
+.success {
+  background-color: variables.$color-secondary;
+
+  &:active {
+    @include mixins.lighten-bg(variables.$color-secondary);
+  }
+
+  @media (hover: hover){
+    &:hover {
+      @include mixins.lighten-bg(variables.$color-secondary);
+    }
+  }
+}
+
+.error {
+  background-color: variables.$color-error;
+
+  &:active {
+    @include mixins.lighten-bg(variables.$color-error);
+  }
+
+  @media (hover: hover){
+    &:hover {
+      @include mixins.lighten-bg(variables.$color-error);
+    }
+  }
+}
