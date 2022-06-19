@@ -45,28 +45,6 @@
   }
 }
 
-.link {
-  @include mixins.link-reset();
-  font-weight: variables.$font-weight-bold;
-  font-size: 1rem;
-  color: variables.$color-light;
-  transition: variables.$transition;
-
-  &:focus-visible {
-    @include mixins.focus-outline(variables.$radius-small);
-  }
-
-  &:active {
-    color: variables.$color-darker;
-  }
-
-  @media (hover: hover) {
-    &:hover {
-      color: variables.$color-darker;
-    }
-  }
-}
-
 .divider {
   display: none;
 }
@@ -131,24 +109,6 @@
     top: 96px;
     opacity: 1;
     visibility: visible;
-  }
-
-  .link {
-    display: block;
-    text-align: center;
-    font-size: 1.1rem;
-    color: white;
-    padding: 12px 0;
-
-    &:active {
-      color: variables.$color-accent;
-    }
-
-    @media (hover: hover) {
-      &:hover {
-        color: variables.$color-accent;
-      }
-    }
   }
 
   .divider {
