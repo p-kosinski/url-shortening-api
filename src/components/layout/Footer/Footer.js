@@ -1,7 +1,7 @@
 import Container from '../Container/Container';
 import LinkLogo from '../../common/LinkLogo/LinkLogo';
 import LinkIcon from '../../common/LinkIcon/LinkIcon';
-import LinkList from '../../common/FooterLinkList/FooterLinkList';
+import LinkList from '../FooterLinkList/FooterLinkList';
 import Link from '../../common/Link/Link';
 import Attribution from '../../common/Attribution/Attribution';
 
