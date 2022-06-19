@@ -3,6 +3,8 @@ import clsx from 'clsx';
 
 import Container from '../Container/Container';
 import LinkLogo from '../../common/LinkLogo/LinkLogo';
+import NavMenu from '../../common/NavMenu/NavMenu';
+import HeaderLinkList from '../HeaderLinkList/HeaderLinkList';
 import LinkButton from '../../common/LinkButton/LinkButton';
 import Link from '../../common/Link/Link';
 
@@ -32,34 +34,22 @@ const Header = () => {
           >
             <FontAwesomeIcon icon={faBars} />
           </button>
-          <div
-            className={
-              clsx(styles.linksWrapper, navOpen && styles.linksWrapperOpened)
-            }
-          >
-            <ul>
-              <li>
-                <Link to='#0' variant='header'>Features</Link>
-              </li>
-              <li>
-                <Link to='#0' variant='header'>Pricing</Link>
-              </li>
-              <li>
+          <NavMenu opened={navOpen}>
+            <HeaderLinkList
+              links={[
+                <Link to='#0' variant='header'>Features</Link>,
+                <Link to='#0' variant='header'>Pricing</Link>,
                 <Link to='#0' variant='header'>Resources</Link>
-              </li>
-            </ul>
+              ]}
+            />
             <hr className={styles.divider} />
-            <ul>
-              <li>
-                <Link to='#0' variant='header'>Login</Link>
-              </li>
-              <li>
-                <LinkButton to='#0' variant='small'>
-                  Sign Up
-                </LinkButton>
-              </li>
-            </ul>
-          </div>
+            <HeaderLinkList
+              links={[
+                <Link to='#0' variant='header'>Login</Link>,
+                <LinkButton to='#0' variant='small'>Sign Up</LinkButton>
+              ]}
+            />
+          </NavMenu>
         </nav>
       </Container>
     </header>

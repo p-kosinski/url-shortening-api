@@ -26,27 +26,17 @@
   display: none;
 }
 
-.linksWrapper {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  ul {
-    @include mixins.list-reset();
-
-    :not(:last-child) {
-      margin-right: 32px;
-    }
-
-    li {
-      display: inline-block;
-    }
-  }
-}
-
 .divider {
   display: none;
+
+  @include mixins.breakpoint(medium) {
+    display: block;
+    border-top: 1px solid transparentize(white, 0.8);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    margin: 24px 0;
+  }
 }
 
 @include mixins.breakpoint(medium) {
@@ -82,41 +72,5 @@
     svg {
       color: variables.$color-darker;
     }
-  }
-
-  .linksWrapper {
-    display: block;
-    position: absolute;
-    top: 110px;
-    width: 87vw;
-    padding: 24px;
-    background-color: variables.$color-secondary;
-    border-radius: variables.$radius-small;
-    opacity: 0;
-    visibility: hidden;
-    transition: variables.$transition;
-
-    ul {
-      li {
-        display: block;
-        width: 100%;
-        margin: 12px 0;
-      }
-    }
-  }
-
-  .linksWrapperOpened {
-    top: 96px;
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .divider {
-    display: block;
-    border-top: 1px solid transparentize(white, 0.8);
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-    margin: 24px 0;
   }
 }

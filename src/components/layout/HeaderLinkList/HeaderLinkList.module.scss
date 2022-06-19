@@ -1,0 +1,21 @@
+@use '../../../styles/mixins' as mixins;
+
+.component {
+  @include mixins.list-reset();
+
+  :not(:last-child) {
+    margin-right: 32px;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  @include mixins.breakpoint(medium) {
+    li {
+      display: block;
+      width: 100%;
+      margin: 12px 0;
+    }
+  }
+}
