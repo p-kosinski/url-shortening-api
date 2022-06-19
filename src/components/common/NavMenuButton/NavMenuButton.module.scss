@@ -1,0 +1,34 @@
+@use '../../../styles/mixins' as mixins;
+@use '../../../styles/variables' as variables;
+
+.component {
+  display: none;
+
+  @include mixins.breakpoint(medium) {
+    @include mixins.btn-reset();
+    background-color: transparent;
+    display: block;
+    width: fit-content;
+    padding: 8px;
+    cursor: pointer;
+
+    &:focus-visible {
+      @include mixins.focus-outline(variables.$radius-small);
+    }
+
+    svg {
+      font-size: 28px;
+      display: block;
+      color: variables.$color-light;
+      transition: variables.$transition;
+    }
+  }
+}
+
+.active {
+  @include mixins.breakpoint(medium) {
+    svg {
+      color: variables.$color-darker;
+    }
+  }
+}

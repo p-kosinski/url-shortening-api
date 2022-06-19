@@ -1,0 +1,30 @@
+@use '../../../styles/mixins' as mixins;
+@use '../../../styles/variables' as variables;
+
+.component {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mixins.breakpoint(medium) {
+    display: block;
+    position: absolute;
+    top: 110px;
+    width: 87vw;
+    padding: 24px;
+    background-color: variables.$color-secondary;
+    border-radius: variables.$radius-small;
+    opacity: 0;
+    visibility: hidden;
+    transition: variables.$transition;
+  }
+}
+
+.opened {
+  @include mixins.breakpoint(medium) {
+    top: 96px;
+    opacity: 1;
+    visibility: visible;
+  }
+}

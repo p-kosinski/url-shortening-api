@@ -1,17 +1,21 @@
 import { useState } from 'react';
-import clsx from 'clsx';
 
 import Container from '../Container/Container';
 import LinkLogo from '../../common/LinkLogo/LinkLogo';
+import NavMenu from '../../common/NavMenu/NavMenu';
+import HeaderLinkList from '../HeaderLinkList/HeaderLinkList';
 import LinkButton from '../../common/LinkButton/LinkButton';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import Link from '../../common/Link/Link';
+import NavMenuButton from '../../common/NavMenuButton/NavMenuButton';
 
 import styles from './Header.module.scss';
 
 const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
+
+  const handleMenuBtnClick = () => {
+    setNavOpen(!navOpen);
+  };
 
   return (
     <header className={styles.component}>
@@ -24,41 +28,23 @@ const Header = () => {
               textColor='dark'
             />
           </div>
-          <button
-            className={clsx(styles.menuBtn, navOpen && styles.menuBtnActive)}
-            onClick={() => setNavOpen(!navOpen)}
-            aria-label={navOpen ? 'close navigation menu' : 'open navigation menu'}
-          >
-            <FontAwesomeIcon icon={faBars} />
-          </button>
-          <div
-            className={
-              clsx(styles.linksWrapper, navOpen && styles.linksWrapperOpened)
-            }
-          >
-            <ul>
-              <li>
-                <a href='#0' className={styles.link}>Features</a>  
-              </li>
-              <li>
-                <a href='#0' className={styles.link}>Pricing</a>
-              </li>
-              <li>
-                <a href='#0' className={styles.link}>Resources</a>
-              </li>
-            </ul>
+          <NavMenuButton active={navOpen} onClick={handleMenuBtnClick} />
+          <NavMenu opened={navOpen}>
+            <HeaderLinkList
+              links={[
+                <Link to='#0' variant='header'>Features</Link>,
+                <Link to='#0' variant='header'>Pricing</Link>,
+                <Link to='#0' variant='header'>Resources</Link>
+              ]}
+            />
             <hr className={styles.divider} />
-            <ul>
-              <li>
-                <a href='#0' className={styles.link}>Login</a>
-              </li>
-              <li>
-                <LinkButton to='#0' variant='small'>
-                  Sign Up
-                </LinkButton>
-              </li>
-            </ul>
-          </div>
+            <HeaderLinkList
+              links={[
+                <Link to='#0' variant='header'>Login</Link>,
+                <LinkButton to='#0' variant='small'>Sign Up</LinkButton>
+              ]}
+            />
+          </NavMenu>
         </nav>
       </Container>
     </header>

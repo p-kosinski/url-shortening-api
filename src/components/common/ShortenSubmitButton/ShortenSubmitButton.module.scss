@@ -1,0 +1,30 @@
+@use '../../../styles/variables' as variables;
+@use '../../../styles/mixins' as mixins;
+
+.submitButton {
+  @include mixins.btn-reset();
+  @include mixins.btn-base();
+  border-radius: variables.$radius-small;
+  padding: 16px 32px;
+  font-size: 1.3rem;
+  transition: variables.$transition;
+
+  &:focus-visible {
+    @include mixins.focus-outline(variables.$radius-small);
+  }
+
+  &:active {
+    @include mixins.lighten-bg(variables.$color-accent);
+  }
+
+  @media (hover: hover){
+    &:hover {
+      @include mixins.lighten-bg(variables.$color-accent);
+    }
+  }
+
+  @include mixins.breakpoint(medium) {
+    padding: 10px 16px;
+    font-size: 1.1rem;
+  }
+}

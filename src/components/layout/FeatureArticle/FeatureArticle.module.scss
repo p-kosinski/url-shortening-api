@@ -10,7 +10,7 @@
 }
 
 .header {
-  margin-top: calc(0px - (1.8em + 44px));
+  margin-top: calc(0px - (28px + 44px));
 
   @include mixins.breakpoint(medium) {
     display: flex;

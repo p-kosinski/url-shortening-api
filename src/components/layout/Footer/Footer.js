@@ -1,7 +1,8 @@
 import Container from '../Container/Container';
 import LinkLogo from '../../common/LinkLogo/LinkLogo';
 import LinkIcon from '../../common/LinkIcon/LinkIcon';
-import LinkFooter from '../../common/LinkFooter/LinkFooter';
+import FooterLinkList from '../FooterLinkList/FooterLinkList';
+import Link from '../../common/Link/Link';
 import Attribution from '../../common/Attribution/Attribution';
 
 import { ReactComponent as FacebookIcon } from '../../../images/icon-facebook.svg';
@@ -19,51 +20,31 @@ const Footer = () => (
           <LinkLogo to='#0' ariaLabel='home page' textColor='white' />
         </div>
         <div className={styles.linksWrapper}>
-          <div className={styles.linkList}>
-            <p className={styles.linkListTitle}>Features</p>
-            <ul>
-              <li>
-                <LinkFooter to='#0'>Link Shortening</LinkFooter>
-              </li>
-              <li>
-                <LinkFooter to='#0'>Branded Links</LinkFooter>
-              </li>
-              <li>
-                <LinkFooter to='#0'>Analytics</LinkFooter>
-              </li>
-            </ul>
-          </div>
-          <div className={styles.linkList}>
-            <p className={styles.linkListTitle}>Resources</p>
-            <ul>
-              <li>
-                <LinkFooter to='#0'>Blog</LinkFooter>
-              </li>
-              <li>
-                <LinkFooter to='#0'>Developers</LinkFooter>
-              </li>
-              <li>
-                <LinkFooter to='#0'>Support</LinkFooter>
-              </li>
-            </ul>
-          </div>
-          <div className={styles.linkList}>
-            <p className={styles.linkListTitle}>Company</p>
-            <ul>
-              <li>
-                <LinkFooter to='#0'>About</LinkFooter>
-              </li>
-              <li>
-                <LinkFooter to='#0'>Our Team</LinkFooter>
-              </li>
-              <li>
-                <LinkFooter to='#0'>Careers</LinkFooter>
-              </li>
-              <li>
-                <LinkFooter to='#0'>Contact</LinkFooter>
-              </li>
-            </ul>
-          </div>
+          <FooterLinkList
+            title='Features'
+            links={[
+              <Link to='#0' variant='footer'>Link Shortening</Link>,
+              <Link to='#0' variant='footer'>Branded Links</Link>,
+              <Link to='#0' variant='footer'>Analytics</Link>
+            ]}
+          />
+          <FooterLinkList
+            title='Resources'
+            links={[
+              <Link to='#0' variant='footer'>Blog</Link>,
+              <Link to='#0' variant='footer'>Developers</Link>,
+              <Link to='#0' variant='footer'>Support</Link>
+            ]}
+          />
+          <FooterLinkList
+            title='Company'
+            links={[
+              <Link to='#0' variant='footer'>About</Link>,
+              <Link to='#0' variant='footer'>Our Team</Link>,
+              <Link to='#0' variant='footer'>Careers</Link>,
+              <Link to='#0' variant='footer'>Contact</Link>
+            ]}
+          />
         </div>
         <div className={styles.iconsWrapper}>
           <LinkIcon
