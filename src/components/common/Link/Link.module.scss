@@ -1,7 +1,7 @@
 @use '../../../styles/mixins' as mixins;
 @use '../../../styles/variables' as variables;
 
-.component {
+.header {
   @include mixins.link-reset();
   font-weight: variables.$font-weight-bold;
   font-size: 1rem;
@@ -38,5 +38,28 @@
         color: variables.$color-accent;
       }
     }
+  }
+}
+
+.footer {
+  @include mixins.link-reset();
+  font-family: variables.$font-main;
+  font-weight: variables.$font-weight-regular;
+  font-size: 0.9rem;
+  color: variables.$color-lighter;
+  transition: variables.$transition;
+
+  &:focus-visible {
+    @include mixins.focus-outline(variables.$radius-small);
+  }
+
+  @media (hover: hover){
+    &:hover {
+      color: variables.$color-accent;
+    }
+  }
+
+  &:active {
+    color: variables.$color-accent;
   }
 }

@@ -2,7 +2,7 @@ import Container from '../Container/Container';
 import LinkLogo from '../../common/LinkLogo/LinkLogo';
 import LinkIcon from '../../common/LinkIcon/LinkIcon';
 import LinkList from '../../common/FooterLinkList/FooterLinkList';
-import LinkFooter from '../../common/LinkFooter/LinkFooter';
+import Link from '../../common/Link/Link';
 import Attribution from '../../common/Attribution/Attribution';
 
 import { ReactComponent as FacebookIcon } from '../../../images/icon-facebook.svg';
@@ -23,26 +23,26 @@ const Footer = () => (
           <LinkList
             title='Features'
             links={[
-              <LinkFooter to='#0'>Link Shortening</LinkFooter>,
-              <LinkFooter to='#0'>Branded Links</LinkFooter>,
-              <LinkFooter to='#0'>Analytics</LinkFooter>
+              <Link to='#0' variant='footer'>Link Shortening</Link>,
+              <Link to='#0' variant='footer'>Branded Links</Link>,
+              <Link to='#0' variant='footer'>Analytics</Link>
             ]}
           />
           <LinkList
             title='Resources'
             links={[
-              <LinkFooter to='#0'>Blog</LinkFooter>,
-              <LinkFooter to='#0'>Developers</LinkFooter>,
-              <LinkFooter to='#0'>Support</LinkFooter>
+              <Link to='#0' variant='footer'>Blog</Link>,
+              <Link to='#0' variant='footer'>Developers</Link>,
+              <Link to='#0' variant='footer'>Support</Link>
             ]}
           />
           <LinkList
             title='Company'
             links={[
-              <LinkFooter to='#0'>About</LinkFooter>,
-              <LinkFooter to='#0'>Our Team</LinkFooter>,
-              <LinkFooter to='#0'>Careers</LinkFooter>,
-              <LinkFooter to='#0'>Contact</LinkFooter>
+              <Link to='#0' variant='footer'>About</Link>,
+              <Link to='#0' variant='footer'>Our Team</Link>,
+              <Link to='#0' variant='footer'>Careers</Link>,
+              <Link to='#0' variant='footer'>Contact</Link>
             ]}
           />
         </div>

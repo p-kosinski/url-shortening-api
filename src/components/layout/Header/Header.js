@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import Container from '../Container/Container';
 import LinkLogo from '../../common/LinkLogo/LinkLogo';
 import LinkButton from '../../common/LinkButton/LinkButton';
-import LinkHeader from '../../common/LinkHeader/LinkHeader';
+import Link from '../../common/Link/Link';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -39,19 +39,19 @@ const Header = () => {
           >
             <ul>
               <li>
-                <LinkHeader to='#0'>Features</LinkHeader>
+                <Link to='#0' variant='header'>Features</Link>
               </li>
               <li>
-                <LinkHeader to='#0'>Pricing</LinkHeader>
+                <Link to='#0' variant='header'>Pricing</Link>
               </li>
               <li>
-                <LinkHeader to='#0'>Resources</LinkHeader>
+                <Link to='#0' variant='header'>Resources</Link>
               </li>
             </ul>
             <hr className={styles.divider} />
             <ul>
               <li>
-                <LinkHeader to='#0'>Login</LinkHeader>
+                <Link to='#0' variant='header'>Login</Link>
               </li>
               <li>
                 <LinkButton to='#0' variant='small'>
