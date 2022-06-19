@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import clsx from 'clsx';
 
 import { useLocalStorage } from '../../../hooks/useLocalStorage';
 
+import ShortenInput from '../../common/ShortenInput/ShortenInput';
 import ShortenedLink from '../ShortenedLink/ShortenedLink';
 
 import styles from './ShortenLinks.module.scss';
@@ -56,18 +56,18 @@ const ShortenLinks = () => {
     }
   };
 
+  const handleInputChange = (event) => {
+    changeLinkToShorten(event.target.value);
+  };
+
   return (
     <>
       <form className={styles.form}>
-        <input
-          placeholder='Shorten a link here...'
-          className={clsx(styles.input, error && styles.inputError)}
-          onChange={(event) => changeLinkToShorten(event.target.value)}
-          aria-required='true'
-          aria-invalid={error}
-          aria-errormessage='link-input-error'
+        <ShortenInput
+          error={error}
+          errorMsg={errorMsg}
+          onChange={handleInputChange}
         />
-        {error && <label id='link-input-error' className={styles.errorMsg}>{errorMsg}</label>}
         <button
           className={styles.submitButton}
           onClick={(event) => handleSubmit(event)}

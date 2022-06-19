@@ -1,0 +1,47 @@
+@use '../../../styles/variables' as variables;
+@use '../../../styles/mixins' as mixins;
+
+.component {
+  @include mixins.btn-reset();
+  border-radius: variables.$radius-small;
+  padding: 12px 32px;
+  width: 100%;
+  font-size: 1.3rem;
+  color: variables.$color-dark;
+  font-weight: variables.$font-weight-regular;
+  text-overflow: ellipsis;
+  transition: variables.$transition;
+
+  &:focus-visible {
+    @include mixins.focus-outline(variables.$radius-small);
+  }
+
+  @include mixins.breakpoint(medium) {
+    padding: 10px 16px;
+    font-size: 1rem;
+  }
+}
+
+.error {
+  border: 3px solid variables.$color-error;
+
+  &::placeholder {
+    color: variables.$color-error;
+  }
+}
+
+.errorMessage {
+  font-weight: variables.$font-weight-regular;
+  font-size: 1rem;
+  color: variables.$color-error;
+  font-style: italic;
+  position: absolute;
+  bottom: 24px;
+
+  @include mixins.breakpoint(medium) {
+    position: static;
+    bottom: initial;
+    font-size: 0.75rem;
+    margin-top: -16px;
+  }
+}
