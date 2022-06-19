@@ -1,17 +1,24 @@
 @use '../../../styles/mixins' as mixins;
-@use '../../../styles/variables' as variables;
 
 .component {
   height: 140px;
   display: flex;
   align-items: center;
   position: relative;
+
+  @include mixins.breakpoint(medium) {
+    height: 110px;
+  }
 }
 
 .nav {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 40px;
+
+  @include mixins.breakpoint(medium) {
+    justify-items: flex-end;
+  }
 }
 
 .logoWrapper {
@@ -20,10 +27,6 @@
   a {
     margin: auto 0;
   }
-}
-
-.menuBtn {
-  display: none;
 }
 
 .divider {
@@ -36,41 +39,5 @@
     border-left: none;
     border-right: none;
     margin: 24px 0;
-  }
-}
-
-@include mixins.breakpoint(medium) {
-  .component {
-    height: 110px;
-  }
-
-  .nav {
-    justify-items: flex-end;
-  }
-
-  .menuBtn {
-    @include mixins.btn-reset();
-    background-color: transparent;
-    display: block;
-    width: fit-content;
-    padding: 8px;
-    cursor: pointer;
-
-    &:focus-visible {
-      @include mixins.focus-outline(variables.$radius-small);
-    }
-
-    svg {
-      font-size: 28px;
-      display: block;
-      color: variables.$color-light;
-      transition: variables.$transition;
-    }
-  }
-
-  .menuBtnActive {
-    svg {
-      color: variables.$color-darker;
-    }
   }
 }
