@@ -5,12 +5,9 @@
   @include mixins.link-reset();
   @include mixins.btn-base();
   display: inline-block;
-  background-color: variables.$color-accent;
   font-size: 1.25rem;
-  white-space: nowrap;
   padding: 16px 32px;
   border-radius: variables.$radius-big;
-  cursor: pointer;
   transition: variables.$transition;
 
   &:focus-visible {

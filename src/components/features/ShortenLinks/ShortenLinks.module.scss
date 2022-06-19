@@ -74,11 +74,8 @@
   @include mixins.btn-reset();
   @include mixins.btn-base();
   border-radius: variables.$radius-small;
-  background-color: variables.$color-accent;
   padding: 16px 32px;
-  white-space: nowrap;
   font-size: 1.3rem;
-  font-weight: variables.$font-weight-bold;
   transition: variables.$transition;
 
   &:focus-visible {

@@ -16,10 +16,12 @@
 }
 
 @mixin btn-base {
+  background-color: variables.$color-accent;
   color: white;
   font-weight: variables.$font-weight-bold;
   cursor: pointer;
   letter-spacing: 0.2px;
+  white-space: nowrap;
 }
 
 @mixin card {
