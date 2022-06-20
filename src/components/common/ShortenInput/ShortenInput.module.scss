@@ -22,6 +22,10 @@
   }
 }
 
+.label {
+  @include mixins.sr-only();
+}
+
 .error {
   border: 3px solid variables.$color-error;
 
@@ -31,17 +35,23 @@
 }
 
 .errorMessage {
-  font-weight: variables.$font-weight-regular;
-  font-size: 1rem;
-  color: variables.$color-error;
-  font-style: italic;
   position: absolute;
   bottom: 24px;
 
   @include mixins.breakpoint(medium) {
     position: static;
     bottom: initial;
-    font-size: 0.75rem;
     margin-top: -16px;
+  }
+
+  span {
+    font-weight: variables.$font-weight-regular;
+    font-size: 1rem;
+    color: variables.$color-error;
+    font-style: italic;
+
+    @include mixins.breakpoint(medium) {
+      font-size: 0.75rem;
+    }
   }
 }
