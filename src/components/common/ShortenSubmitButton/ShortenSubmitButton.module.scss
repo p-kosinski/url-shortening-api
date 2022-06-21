@@ -2,6 +2,7 @@
 @use '../../../styles/mixins' as mixins;
 
 .submitButton {
+  grid-area: submit;
   @include mixins.btn-reset();
   @include mixins.btn-base();
   border-radius: variables.$radius-small;

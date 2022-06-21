@@ -5,21 +5,24 @@ import styles from './ShortenInput.module.scss';
 
 const ShortenInput = ({ error, errorMsg, onChange }) => (
   <>
+    <label htmlFor='shorten-input' className={styles.label}>
+      Enter a link to be shortened
+    </label>
     <input
+      id='shorten-input'
+      name='shorten-input'
       placeholder='Shorten a link here...'
       className={clsx(styles.component, error && styles.error)}
       onChange={(event) => onChange(event)}
       aria-required='true'
       aria-invalid={error}
-      aria-errormessage='link-input-error'
     />
-    {error &&
-      <label
-        id='link-input-error'
-        className={styles.errorMessage}
-      >
-        {errorMsg}
-      </label>}
+    <div
+      role='alert'
+      className={clsx(styles.errorMessage, error && styles.errorMessageActive)}
+    >
+      <span>{errorMsg}</span>
+    </div>
   </>
 );
 
