@@ -3,7 +3,6 @@
 
 .base {
   display: inline-block;
-  transition: variables.$transition;
 
   &:focus-visible {
     @include mixins.focus-outline(variables.$radius-small);

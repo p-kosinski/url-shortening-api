@@ -11,7 +11,9 @@
   color: variables.$color-dark;
   font-weight: variables.$font-weight-regular;
   text-overflow: ellipsis;
-  transition: variables.$transition;
+  transition:
+    border variables.$transition,
+    color variables.$transition;
 
   &:focus-visible {
     @include mixins.focus-outline(variables.$radius-small);

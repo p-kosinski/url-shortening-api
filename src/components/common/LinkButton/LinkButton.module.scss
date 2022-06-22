@@ -8,7 +8,7 @@
   font-size: 1.25rem;
   padding: 16px 38px;
   border-radius: variables.$radius-big;
-  transition: variables.$transition;
+  transition: background-color variables.$transition;
 
   &:focus-visible {
     @include mixins.focus-outline(variables.$radius-big);

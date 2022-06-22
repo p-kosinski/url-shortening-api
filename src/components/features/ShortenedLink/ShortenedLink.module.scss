@@ -37,17 +37,6 @@
   }
 }
 
-.divider {
-  margin: 0;
-  border: none;
-  border-top: 1px solid transparentize(variables.$color-lighter, 0.5);
-  display: none;
-
-  @include mixins.breakpoint(medium) {
-    display: block;
-  }
-}
-
 .shortenedLink {
   grid-area: shortened;
   @include mixins.ellipsis();
@@ -79,5 +68,6 @@
     display: block;
     border: none;
     border-top: 1px solid transparentize(variables.$color-lighter, 0.5);
+    margin: 0;
   }
 }

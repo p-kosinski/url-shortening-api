@@ -22,6 +22,7 @@
     @include mixins.link-reset();
     color: variables.$color-lighter;
     transition: variables.$transition;
+    transition: color variables.$transition;
 
     &:focus-visible {
       @include mixins.focus-outline(variables.$radius-small);
