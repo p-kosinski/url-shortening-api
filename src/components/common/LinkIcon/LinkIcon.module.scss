@@ -3,7 +3,7 @@
 
 .component {
   fill: white;
-  transition: variables.$transition;
+  transition: fill variables.$transition;
 
   &:focus-visible {
     @include mixins.focus-outline(variables.$radius-small);

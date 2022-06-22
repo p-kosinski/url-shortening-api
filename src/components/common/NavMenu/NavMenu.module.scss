@@ -17,7 +17,10 @@
     border-radius: variables.$radius-small;
     opacity: 0;
     visibility: hidden;
-    transition: variables.$transition;
+    transition:
+      top variables.$transition,
+      opacity variables.$transition,
+      visibility variables.$transition;
   }
 }
 

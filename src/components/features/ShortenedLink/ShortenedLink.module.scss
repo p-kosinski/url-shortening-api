@@ -2,9 +2,9 @@
 @use '../../../styles/mixins' as mixins;
 
 .component {
-  margin-top: 24px;
+  margin-top: 18px;
   @include mixins.card();
-  padding: 16px 32px;
+  padding: 20px 24px;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr min-content min-content;
@@ -34,17 +34,6 @@
     font-size: 1rem;
     margin: 0;
     padding: 16px;
-  }
-}
-
-.divider {
-  margin: 0;
-  border: none;
-  border-top: 1px solid transparentize(variables.$color-lighter, 0.5);
-  display: none;
-
-  @include mixins.breakpoint(medium) {
-    display: block;
   }
 }
 
@@ -79,5 +68,6 @@
     display: block;
     border: none;
     border-top: 1px solid transparentize(variables.$color-lighter, 0.5);
+    margin: 0;
   }
 }

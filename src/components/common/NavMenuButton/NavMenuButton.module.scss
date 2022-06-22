@@ -20,7 +20,7 @@
       font-size: 28px;
       display: block;
       color: variables.$color-light;
-      transition: variables.$transition;
+      transition: color variables.$transition;
     }
   }
 }
