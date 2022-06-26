@@ -30,12 +30,16 @@ const ShortenedLink = ({ originalLink, shortenedLink }) => {
   return (
     <div className={styles.component}>
       <div className={styles.originalLink}>
-        <span>{originalLink}</span>
+        <span data-testid='original-link'>
+          {originalLink}
+        </span>
       </div>
       <hr className={styles.divider} />
       <div className={styles.shortenedLink}>
         <span>
-          <mark>{shortenedLink}</mark>
+          <mark data-testid='shortened-link'>
+            {shortenedLink}
+          </mark>
         </span>
       </div>
       <CopyButton

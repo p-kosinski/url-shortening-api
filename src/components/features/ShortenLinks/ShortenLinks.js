@@ -63,7 +63,7 @@ const ShortenLinks = () => {
 
   return (
     <>
-      <form className={styles.form}>
+      <form aria-label='shorten links' className={styles.form}>
         <ShortenInput
           error={error}
           errorMsg={errorMsg}

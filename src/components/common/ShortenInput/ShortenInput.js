@@ -21,7 +21,7 @@ const ShortenInput = ({ error, errorMsg, onChange }) => (
       role='alert'
       className={clsx(styles.errorMessage, error && styles.errorMessageActive)}
     >
-      <span>{errorMsg}</span>
+      <span data-testid='error-message'>{errorMsg}</span>
     </div>
   </>
 );
