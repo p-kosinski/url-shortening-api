@@ -125,6 +125,42 @@ describe('ShortenLinks component', () => {
     expect(navigator.clipboard.readText()).toBe(mockedShortenedUrl);
   });
 
+  it('loads shortened links from localStorage on mount', async () => {
+    const mockLinksData = [
+      {
+        code: '3E4Qna',
+        originalLink: 'https://testing-library.com/docs/react-testing-library/example-intro',
+        shortLink: 'https://shrtco.de/3E4Qna'
+      },
+      {
+        code: 'lKS5VG',
+        originalLink: 'https://css-tricks.com/snippets/css/complete-guide-grid/',
+        shortLink: 'https://shrtco.de/lKS5VG'
+      }
+    ];
+
+    localStorage.setItem('shortenedLinks', JSON.stringify(mockLinksData));
+
+    expect(localStorage.__STORE__['shortenedLinks']).toBe(JSON.stringify(mockLinksData));
+
+    render(<ShortenLinks />);
+    
+    const linksList = screen.getByRole('list');
+
+    const shortenedLinks = await within(linksList).findAllByRole('listitem');
+
+    shortenedLinks.forEach((link, i) => {
+      const originalLink = within(link).getByTestId('original-link');
+      const shortenedLink = within(link).getByTestId('shortened-link');
+
+      expect(originalLink).toHaveTextContent(mockLinksData[i].originalLink);
+      expect(shortenedLink).toHaveTextContent(mockLinksData[i].shortLink);
+    });
+
+    expect(localStorage.getItem).toHaveBeenLastCalledWith('shortenedLinks');
+    expect(shortenedLinks.length).toBe(mockLinksData.length);
+  });
+
   it('saves successfully shortened link to localStorage', async () => {
     render(<ShortenLinks />);
 
