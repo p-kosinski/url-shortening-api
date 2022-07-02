@@ -46,7 +46,10 @@ const Footer = () => (
             ]}
           />
         </div>
-        <div className={styles.iconsWrapper}>
+        <div
+          className={styles.iconsWrapper}
+          data-testid='icon-links'
+        >
           <LinkIcon
             to='#0'
             icon={<FacebookIcon role='presentation' />}
