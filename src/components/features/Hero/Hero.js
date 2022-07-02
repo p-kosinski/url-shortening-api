@@ -6,7 +6,10 @@ import IllustrationWorking from '../../../images/illustration-working.svg';
 import styles from './Hero.module.scss';
 
 const Hero = () => (
-  <section className={styles.section}>
+  <section
+    className={styles.section}
+    data-testid='hero-section'
+  >
     <Container>
       <div className={styles.wrapper}>
         <div className={styles.content}>
