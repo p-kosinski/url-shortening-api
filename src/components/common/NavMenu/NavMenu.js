@@ -4,7 +4,10 @@ import clsx from 'clsx';
 import styles from './NavMenu.module.scss';
 
 const NavMenu = ({ opened, children }) => (
-  <div className={clsx(styles.component, opened && styles.opened)}>
+  <div
+    className={clsx(styles.component, opened && styles.opened)}
+    data-testid='nav-menu'
+  >
     {children}
   </div>
 );
