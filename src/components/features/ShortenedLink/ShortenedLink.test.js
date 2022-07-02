@@ -52,7 +52,7 @@ describe('ShortenedLink component', () => {
     expect(navigator.clipboard.readText()).toBe(mockShortenedLink);
   });
 
-  it('temporary renders \'Copied!\' button text when link has been copied', async () => {
+  it('temporary renders success button variant when link has been copied', async () => {
     const mockOriginalLink = 'https://testing-library.com/docs/react-testing-library/example-intro';
     const mockShortenedLink = 'https://shrtco.de/3E4Qna';
     
@@ -70,5 +70,34 @@ describe('ShortenedLink component', () => {
     await waitFor(() => {
       expect(copyButton).toHaveTextContent('Copied!');
     });
+
+    expect(copyButton).toHaveClass('success');
+  });
+
+  it('renders error button variant and throws error when clipboard API isn\'t available', async () => {
+    global.navigator.clipboard = undefined;
+    global.console = {
+      error: jest.fn(),
+    };
+    
+    const mockOriginalLink = 'https://testing-library.com/docs/react-testing-library/example-intro';
+    const mockShortenedLink = 'https://shrtco.de/3E4Qna';
+    
+    render(
+      <ShortenedLink
+        originalLink={mockOriginalLink}
+        shortenedLink={mockShortenedLink}
+      />
+    );
+
+    const copyButton = screen.getByRole('button');
+    
+    fireEvent.click(copyButton);
+
+    await waitFor(() => {
+      expect(copyButton).toHaveClass('error');
+    });
+
+    expect(console.error).toBeCalledTimes(1);
   });
 });
