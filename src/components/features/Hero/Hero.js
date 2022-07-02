@@ -11,7 +11,7 @@ const Hero = () => (
       <div className={styles.wrapper}>
         <div className={styles.content}>
           <h1>More than just shorter links</h1>
-          <p>
+          <p data-testid='hero-paragraph'>
             Build your brand’s recognition and get
             detailed insights on how your links are performing.
           </p>
