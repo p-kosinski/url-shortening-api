@@ -6,12 +6,15 @@ import IllustrationWorking from '../../../images/illustration-working.svg';
 import styles from './Hero.module.scss';
 
 const Hero = () => (
-  <section className={styles.section}>
+  <section
+    className={styles.section}
+    data-testid='hero-section'
+  >
     <Container>
       <div className={styles.wrapper}>
         <div className={styles.content}>
           <h1>More than just shorter links</h1>
-          <p>
+          <p data-testid='hero-paragraph'>
             Build your brand’s recognition and get
             detailed insights on how your links are performing.
           </p>

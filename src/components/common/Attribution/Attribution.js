@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import styles from './Attribution.module.scss';
 
 const Attribution = ({ author, githubLink }) => (
-  <div className={styles.component}>
+  <div
+    className={styles.component}
+    data-testid='attribution'
+  >
     Challenge by&nbsp;
     <a
       href="https://www.frontendmentor.io?ref=challenge"
@@ -12,7 +15,14 @@ const Attribution = ({ author, githubLink }) => (
     >
       Frontend Mentor
     </a>.&nbsp;
-    Coded by <a href={githubLink}>{author}</a>.
+    Coded by&nbsp;
+    <a
+      href={githubLink}
+      target="_blank"
+      rel='noreferrer'
+    >
+      {author}
+    </a>.
   </div>
 );
 

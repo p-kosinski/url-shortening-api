@@ -10,7 +10,7 @@ const StatisticsSection = () => (
   <section className={styles.component}>
     <div className={styles.heading}>
       <h2>Advanced Statistics</h2>
-      <p>
+      <p data-testid='statistics-paragraph'>
         Track how your links are performing across the web 
         with our advanced statistics dashboard.
       </p>
