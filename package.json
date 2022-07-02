@@ -30,7 +30,11 @@
     "eject": "react-scripts eject"
   },
   "jest": {
-    "resetMocks": false
+    "resetMocks": false,
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.js"
+    ]
   },
   "eslintConfig": {
     "extends": [
