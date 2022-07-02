@@ -12,7 +12,14 @@ const Attribution = ({ author, githubLink }) => (
     >
       Frontend Mentor
     </a>.&nbsp;
-    Coded by <a href={githubLink}>{author}</a>.
+    Coded by&nbsp;
+    <a
+      href={githubLink}
+      target="_blank"
+      rel='noreferrer'
+    >
+      {author}
+    </a>.
   </div>
 );
 
