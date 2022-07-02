@@ -11,7 +11,7 @@ const FeatureArticle = ({ icon, title, text }) => (
     </header>
     <section className={styles.content}>
       <h3>{title}</h3>
-      <p>{text}</p>
+      <p data-testid='article-paragraph'>{text}</p>
     </section>
   </article>
 );
