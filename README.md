@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL [here](https://your-solution-url.com).
+- Solution URL [here](https://www.frontendmentor.io/solutions/url-shortening-api-reactjs-solution-V3PeBko93X).
 - Live Site URL [here](https://verdant-pony-554f00.netlify.app/).
 
 ## Project Setup
